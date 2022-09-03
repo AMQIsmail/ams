@@ -16,7 +16,7 @@ class Topbanner extends Component{
             <Col className='text-center'>
                <h2 className='homeTopTitle'>بسم الله الرحمن الرحيم</h2>
                <h2 className='homeTopTitle'>আসসালামু আলাইকুম।</h2>
-               <h3 className='homeTopTitle'>WelCome My Website</h3>
+               <h3 className='homeTopTitle'>WelCome My Website.</h3>
                <p className='homeTopSubTitle'>এই জায়গা কাজ শেখার জায়গা এবং সমস্যার সমাধান পাওয়ার জায়গা।</p>
                <p className='homeTopSubTitle'>তবে শর্ত হল ধৈর্য ধরেন তাড়াহুড়ো করবেন না এদিক-ওদিক ছোটাছুটি করবেন না।<br></br> 
                ধৈর্য ধরে এক জায়গায় লেগে থাকুন ভালো কিছু শিখুন, আপনাদেরকে এখানে MERN Stick ডেভেলপার হিসেবে গড়ে তোলা হবে।</p>
