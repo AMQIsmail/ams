@@ -5,9 +5,18 @@
 .click-to-top{
     position:fixed;
     padding: 0.5em;
-    bottom: 0;
-    right: 2em;
+    bottom: 30px;
+    right: 1em;
     text-decoration: none;
     display: none;
     z-index:99;
     }
+@media only screen and (max-width : 640px){
+.click-to-top{
+    position:fixed;
+    bottom: 30px;
+    right: 1.5em;
+    text-decoration: none;
+    display: none;
+    z-index:99;
+}}
