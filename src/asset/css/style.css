@@ -1,0 +1,177 @@
+/*Re use Css*/
+.h1{ font-size: 25px; padding: 10px 10px 10px 10px;}
+.full_div{
+  background-color: rgb(244, 238, 231);
+  width: 100%;
+  padding-top: 20px;
+}
+.addsens{
+  background-color: #fff;
+  height: 250px;
+  border-radius: 5px;
+  padding: 10px 10px 20px 10px;
+}
+.content h2{
+  color: black;
+  font-size: 17px;
+  font-weight: 400;
+  padding-top: 20px;
+}
+.content h4{
+  font-size: 15px;
+  font-weight: 400;
+}
+.pContent{
+  background-color: rgb(241, 241, 213);
+  padding-top: 20px;
+  font-size: 16px;
+}
+.h2Content{
+  font-size: 22px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+}
+/* top banner section start */
+.homeTopFixBanner{ 
+    background-image: url('../img/top-banner.jpg');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .homeTopBannerOverla{
+    position: absolute;
+    min-height: 500px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2)
+  }
+  .homeTopContent{
+    margin-top: 2rem;
+  }
+  .homeTopTitle{
+    font-family: 'Montserreat', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 30px;
+  }
+  .homeTopSubTitle{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+  /* top banner section end */
+
+  /*services section start */
+.serviceCard{
+  margin: 5px;
+  height: 20rem;
+  padding: 30px 15px 30px 15px;
+  box-shadow: 0 0 4px 0 rgba(0, 115, 230, 0.2);
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+}
+.serviceCard:hover{
+  box-shadow: 0 0 8px 0 rgba(0, 115, 230, 0.2);
+}
+  /*services section end */
+  
+  /* Nav section start*/
+  .navBack{
+    background: rgba(0, 0, 0, 0.6);
+    height: 5rem;
+  }
+  /* nav logo */
+  .manLogo{
+    width:10rem;
+  }
+  @media only screen and (max-width: 990px) {
+    .manLogo{
+      width: 7rem;
+      margin-top: -50px;
+    }
+  }
+  .nav-link{
+    color: rgb(255, 255, 255) !important;
+  }
+  .nav-link:hover{
+    color: rgb(182, 217, 177) !important;
+  }
+  .show > .nav-link,
+  .nav-link.active {
+    color: rgb(0, 221, 18) !important;
+  }
+  /* drobdoun menu */
+  .dropdown-menu{
+    background-color: rgba(8, 14, 6, 0.6);
+    border-radius: 5px;
+    width: 400px;
+  }
+  .dropdown-menu[data-bs-popper] {
+    margin-top:13px;
+    max-width: 500px;
+}
+  .dropdown-item{
+    color: rgb(223, 223, 223);
+    margin-top: -3px;
+    padding-top: 7px;
+    width: 100%;
+  }
+  @media only screen and (max-width: 900px) {
+    .dropdown-menu[data-bs-popper]{
+       width: 100%;
+    }
+  }
+  .dropdown-item:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgba(15, 96, 36, 0.6);
+  }
+  /* toggler icon */
+  .navbar-dark .navbar-toggler-icon{
+    /* background-image: url(../img/icon/man.png); */
+    border-radius: 15px;
+    padding: 1px 0px;
+    width: 30px;
+    color: #fff;
+  }
+  .navbar-dark .navbar-toggler {
+    color: rgb(149, 149, 149);
+    margin-left: 10px;
+  }
+  @media only screen and (max-width: 990px) {
+    .navbar-collapse{
+      background: rgba(31, 77, 18, 0.6);
+      padding:5px 1px 5px 5px;
+      margin-top: 1px;
+      max-width: 100%;
+      border-radius: 6px;
+    }
+  }
+   /* Nav section end*/
+
+
+/*futer*/
+.content_futer{
+  background-color: rgb(1, 1, 1);
+  width: 100%;
+  color: #fff;
+}
+@media only screen and (max-width: 990px) {
+  .content_futer{
+    background: rgb(45, 44, 44);
+    font-size: 20px;
+    width: 100%;
+    padding: 10px 10px 10px 50px;
+  }}
+.Powerwd{
+  background-color: black;
+  font-size: 20px;
+  color: rgb(1, 136, 46) !important;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  width: 100%;
+  margin-top: -32px;
+}

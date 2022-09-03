@@ -1,0 +1,13 @@
+.privacyBack{
+    background: rgb(43, 43, 43);
+    padding: 30px;
+    
+}
+.privacy-text{
+    max-width:900px;
+    margin: auto;
+}
+.privacy-text h2,
+.privacy-text p{
+    color: #fff;
+}
