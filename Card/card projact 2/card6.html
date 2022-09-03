@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>card 6</title>
+<style type="text/css">
+button{
+background:green;
+color:black;
+font-size:25px; 
+width:80px; 
+height:40px;
+border:none; 
+border-radius:5px; 
+outline:none;
+}
+button:hover{
+ background:black;
+ color:#fff;
+ font-size:28px;
+}
+.item{
+background:#fff;
+color:black;
+padding:3px;
+border-radius:5px;
+width:30px;
+border:none;
+outline:none;
+font-size:20px;
+}
+</style>
+</head>
+<body>
+<h1 style="color:#000; text-align:center">card projact 6<br> Add Shipping Charge and button desaign</h1>
+
+
+<div style="background: #FF00FF; padding:20px; border-radius:10px">
+<h3>Total Item Amount: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id='total_item_amount'>0</span> Tk.</h3>
+  <hr /><h3>Shipping Charge: <span id='shipping'> 50</span> Tk. <hr /></h3>
+  <h3 style="background:black; color: #fff; padding:20px;border-radius:10px">Total Amount = <span style="background:#fff; color:black; padding:5px; border-radius:5px" id="total_amount">0</span> Tk.</h3><hr />
+</div>
+
+
+<br />
+
+
+<div style="background: #800080; padding:30px; border-radius:10px">
+<h1>CHICKEN</h1>
+<h2>Chicken Price: <span id="chicken_price">100 </span>Tk</h2>
+<h3>Chicken Total Price: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id="chicken_store">0</span> Tk</h3>
+<label>Item: </label>
+<input type='button' class="item" value="0" id="chicken_inc_dec"><br><br>
+<button onclick="pieceIncrement('chicken_inc_dec', 'chicken_price', 'chicken_store')">+</button>
+<button onclick="pieceDecrement('chicken_inc_dec', 'chicken_price', 'chicken_store')">-</button>
+</div>
+
+
+<br />
+
+
+<div style="background: #00FF00; padding:30px; border-radius:10px">
+<h1>BURGER</h1>
+<h2>Burger Price: <span id="burger_price">200 </span>Tk.</h2>
+<h3>Burger Total Price: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id="burger_store">0</span> Tk.</h3>
+<label>Item: </label>
+<input type='button' class="item" value="0" id="burger_inc_dec"><br><br>
+<button onclick="pieceIncrement('burger_inc_dec', 'burger_price', 'burger_store')">+</button>
+<button onclick="pieceDecrement('burger_inc_dec', 'burger_price', 'burger_store')">-</button>
+</div>
+
+
+<br />
+
+
+<div style="background: #808000; padding:30px; border-radius:10px">
+<h1>PIZZA</h1>
+<h2>Pizza Price: <span id="pizza_price">300 </span>Tk</h2>
+<h3>Pizza Total Price: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id="pizza_store">0</span> Tk.</h3>
+<label>Item: </label>
+<input type='button' class="item" value="0" id="pizza_inc_dec"><br><br>
+<button onclick="pieceIncrement('pizza_inc_dec', 'pizza_price', 'pizza_store')">+</button>
+<button onclick="pieceDecrement('pizza_inc_dec', 'pizza_price', 'pizza_store')">-</button>
+</div>
+
+
+
+
+
+<script>
+// Increment function
+function pieceIncrement(incrementPiece, singlePrice, storePiece){
+// increment price pieceStore id
+let increment = document.getElementById(incrementPiece);
+let price = document.getElementById(singlePrice);
+let pieceStore = document.getElementById(storePiece);
+
+// condition
+if (increment.value >= 5){
+  alert("maximum 5 product alow");
+  increment.value = 5;
+}else{
+ increment.value++;
+ // convert
+ let priceInt = Number(price.innerHTML);
+ let pieceStoreInt = Number(pieceStore.innerHTML);
+ let priceStoreTotal = pieceStoreInt + priceInt;
+ // Set piece value
+ pieceStore.innerHTML = priceStoreTotal;
+ 
+ // Total Item id
+ let totalItemAmount = document.getElementById('total_item_amount');
+ let totalItemAmountInt = Number(totalItemAmount.innerHTML); // convert integer
+ // set item price value
+ let amountTotalItem = totalItemAmount.innerHTML = totalItemAmountInt + priceInt;
+ 
+ // Total Amount and shipping id
+ let shipping = document.getElementById('shipping');
+ let totalAmount = document.getElementById('total_amount');
+ let shippingInt = parseInt(shipping.innerHTML); // convert integer
+ let totalAmountInt = parseInt(totalAmount.innerHTML); // convert integer
+ 
+ // Set shipping charge
+ totalAmount.innerHTML = amountTotalItem + shippingInt;
+}
+}
+
+
+
+
+
+// Decrement function
+function pieceDecrement(decrementPiece, singlePrice, storePiece){
+// decrement price pieceStore id
+let decrement = document.getElementById(decrementPiece);
+let price = document.getElementById(singlePrice);
+let pieceStore = document.getElementById(storePiece);
+
+// condition
+if (decrement.value <= 0){
+  alert("minimum 1 product need");
+  decrement.value = 0;
+}else{
+decrement.value--;
+
+ // convert
+  let priceInt = Number(price.innerHTML);
+  let pieceStoreInt = Number(pieceStore.innerHTML);
+  let priceStoreTotal = pieceStoreInt - priceInt;
+  // Set piece minus value
+  pieceStore.innerHTML = priceStoreTotal;
+  
+  // Total Item id
+  let totalItemAmount = document.getElementById('total_item_amount');
+  let totalItemAmountInt = Number(totalItemAmount.innerHTML); // convert integer
+  // set item price value
+  totalItemAmount.innerHTML = totalItemAmountInt - priceInt;
+  
+// Total Amount id
+  let totalAmount = document.getElementById('total_amount');
+  let totalAmountInt = parseInt(totalAmount.innerHTML); // convert integer
+  // Minus Price 
+  let minusTotalAmount = totalAmount.innerHTML = totalAmountInt - priceInt;
+  // Minus shipping with condition
+  if(minusTotalAmount <= 99){
+    totalAmount.innerHTML = 0;
+  }
+}}
+</script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>card 8</title>
+<style type="text/css">
+.about{
+ background:green;
+ border-radius:10px;
+ padding:10px;
+}
+button{
+background:green;
+color:black;
+font-size:25px; 
+width:80px; 
+height:40px;
+border:none; 
+border-radius:5px; 
+outline:none;
+}
+button:hover{
+ background:black;
+ color:#fff;
+}
+.item{
+background:#fff;
+color:black;
+padding:3px;
+border-radius:5px;
+width:30px;
+border:none;
+outline:none;
+font-size:20px;
+}
+#coupon{
+ font-size:14px;
+}
+#coupon_area{
+ background:black;
+ color:#fff;
+ padding:20px;
+ border-radius:10px;
+}
+#couponApply{
+ background:#808000;
+}
+#couponInput{
+ padding-top:10px;
+ padding-bottom:10px;
+ padding-left:5px;
+ width:200px;
+ border:none;
+ outline:none;
+ border-radius:5px;
+}
+#print{
+display:none;
+background: #808000;
+padding:20px;
+border-radius:10px;
+color:#fff;
+font-size:20px;
+}
+#ismail{
+ width:150px;
+ height:150px;
+ border-radius:50%;
+}
+.ismail{
+width:30px;
+height:30px;
+border-radius:50%;
+}
+.itemImag{
+ width:200px;
+ height:130px;
+ border-radius:20px;
+}
+</style>
+</head>
+<body>
+<!--About Us-->
+<div class="about">
+   <center><img id="ismail" src="img/ismail.jpg"></center>
+   <h4 style="color:#fff; text-align:center">card projact 8<br> Add Images.</h4>
+</div>
+
+
+<br />
+
+<!--Total Item and Shipping and Total Amount Area-->
+<div style="background: #FF00FF; padding:20px; border-radius:10px">
+<h3>Total Item Amount: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id='total_item_amount'>0</span> Tk.</h3>
+  <hr /><h3>Shipping Charge: <span id='shipping'> 50</span> Tk. <hr /></h3>
+  <h3 style="background:black; color: #fff; padding:20px;border-radius:10px">
+  Total Amount = <span style="background:#fff; color:black; padding:5px; border-radius:5px" id="total_amount">0</span> Tk.</h3><hr />
+  <h5 id="discountMessage">If 1000 Tk Shopping so Discount 100 Tk.</h5>
+</div>
+
+<br />
+
+<!--Print area-->
+     <div id="print">
+       <h6>If You Want to Print Your Amount  Click to Print Button</h6>
+       <button onclick="printWindow()">Print</button>
+    </div>
+
+
+
+<!--Discount Coupon Area-->
+<div id="coupon_area">
+  <h5>Your Coupon  Code is: <br /><br />
+  <span id="couponCode">
+  <script>
+  let random = Math.random();
+  document.write(random);
+  </script>
+  </span>
+  <input type="text" id="couponInput" placeholder="Enter Your Coupon Code...">
+  <button id="couponApply" onclick="discountCoupon()">Apply</button>
+  </h5>
+</div>
+
+
+<br />
+
+
+<!--chicken area-->
+<div style="background: #800080; padding:30px; border-radius:10px">
+<img class="ismail" src="img/ismail.jpg">
+<img class="itemImag" src="img/chicken.jpg">
+<h1>CHICKEN</h1>
+<h2>Chicken Price: <span id="chicken_price">100 </span>Tk</h2>
+<h3>Chicken Total Price: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id="chicken_store">0</span> Tk</h3>
+<label>Piece: </label>
+<input type='button' class="item" value="0" id="chicken_inc_dec"><br><br>
+<button id="increment1" onclick="pieceIncrement('chicken_inc_dec', 'chicken_price', 'chicken_store')">+</button>
+<button id="decrement1" onclick="pieceDecrement('chicken_inc_dec', 'chicken_price', 'chicken_store')">-</button>
+</div>
+
+
+<br />
+
+<!--burger area-->
+<div style="background: #00FF00; padding:30px; border-radius:10px">
+<img class="ismail" src="img/ismail.jpg">
+<img class="itemImag" src="img/burger.jpg">
+<h1>BURGER</h1>
+<h2>Burger Price: <span id="burger_price">200 </span>Tk.</h2>
+<h3>Burger Total Price: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id="burger_store">0</span> Tk.</h3>
+<label>Piece: </label>
+<input type='button' class="item" value="0" id="burger_inc_dec"><br><br>
+<button id="increment2" onclick="pieceIncrement('burger_inc_dec', 'burger_price', 'burger_store')">+</button>
+<button id="decrement2" onclick="pieceDecrement('burger_inc_dec', 'burger_price', 'burger_store')">-</button>
+</div>
+
+
+<br />
+
+<!--Pizza area-->
+<div style="background: #808000; padding:30px; border-radius:10px">
+<img class="ismail" src="img/ismail.jpg">
+<img class="itemImag" src="img/pizza.jpg">
+<h1>PIZZA</h1>
+<h2>Pizza Price: <span id="pizza_price">300 </span>Tk</h2>
+<h3>Pizza Total Price: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id="pizza_store">0</span> Tk.</h3>
+<label>Piece: </label>
+<input type='button' class="item" value="0" id="pizza_inc_dec"><br><br>
+<button id="increment3" onclick="pieceIncrement('pizza_inc_dec', 'pizza_price', 'pizza_store')">+</button>
+<button id="decrement3" onclick="pieceDecrement('pizza_inc_dec', 'pizza_price', 'pizza_store')">-</button>
+</div>
+
+
+
+
+
+<script>
+// Increment function
+function pieceIncrement(incrementPiece, singlePrice, storePiece){
+// increment price pieceStore id
+let increment = document.getElementById(incrementPiece);
+let price = document.getElementById(singlePrice);
+let pieceStore = document.getElementById(storePiece);
+
+// condition
+if (increment.value >= 5){
+  alert("maximum 5 product alow");
+  increment.value = 5;
+}else{
+ increment.value++;
+ // convert
+ let priceInt = Number(price.innerHTML);
+ let pieceStoreInt = Number(pieceStore.innerHTML);
+ let priceStoreTotal = pieceStoreInt + priceInt;
+ // Set piece value
+ pieceStore.innerHTML = priceStoreTotal;
+ 
+ // Total Item id
+ let totalItemAmount = document.getElementById('total_item_amount');
+ let totalItemAmountInt = Number(totalItemAmount.innerHTML); // convert integer
+ // set item price value
+ let amountTotalItem = totalItemAmount.innerHTML = totalItemAmountInt + priceInt;
+ 
+ // Total Amount and shipping id
+ let shipping = document.getElementById('shipping');
+ let totalAmount = document.getElementById('total_amount');
+ let shippingInt = parseInt(shipping.innerHTML); // convert integer
+ let totalAmountInt = parseInt(totalAmount.innerHTML); // convert integer
+ // Set shipping charge
+ let amountShippingTotal = totalAmount.innerHTML = amountTotalItem + shippingInt;
+ 
+ // Discount Coupon Condition
+ if(amountShippingTotal >= 1000){
+ // Coupon Area Block
+ let couponArea = document.getElementById("coupon_area");
+ couponArea.style.display = "block";
+ }
+}
+}
+
+
+
+
+
+
+
+// Decrement function
+function pieceDecrement(decrementPiece, singlePrice, storePiece){
+// decrement price pieceStore id
+let decrement = document.getElementById(decrementPiece);
+let price = document.getElementById(singlePrice);
+let pieceStore = document.getElementById(storePiece);
+
+// condition
+if (decrement.value <= 0){
+  alert("minimum 1 product need");
+  decrement.value = 0;
+}else{
+decrement.value--;
+
+ // convert
+  let priceInt = Number(price.innerHTML);
+  let pieceStoreInt = Number(pieceStore.innerHTML);
+  let priceStoreTotal = pieceStoreInt - priceInt;
+  // Set piece minus value
+  pieceStore.innerHTML = priceStoreTotal;
+  
+  // Total Item id
+  let totalItemAmount = document.getElementById('total_item_amount');
+  let totalItemAmountInt = Number(totalItemAmount.innerHTML); // convert integer
+  // set item price value
+  totalItemAmount.innerHTML = totalItemAmountInt - priceInt;
+  
+// Total Amount id
+  let totalAmount = document.getElementById('total_amount');
+  let totalAmountInt = parseInt(totalAmount.innerHTML); // convert integer
+  // Minus Price 
+  let minusTotalAmount = totalAmount.innerHTML = totalAmountInt - priceInt;
+  // Minus shipping with condition
+  if(minusTotalAmount <= 99){
+    totalAmount.innerHTML = 0;
+  }
+  // Discount Coupon Condition
+  if(totalAmount.innerHTML <= 999){
+  let couponArea = document.getElementById("coupon_area");
+  couponArea.style.display = "none";
+  }
+}}
+
+
+
+
+
+
+
+// Coupon Area none
+let couponArea = document.getElementById("coupon_area");
+couponArea.style.display = "none";
+// Coupon Area function
+function discountCoupon(){
+// Coupon Apply
+let totalAmount = document.getElementById('total_amount');
+let totalAmountInt = parseInt(totalAmount.innerHTML);
+let couponInput = document.getElementById("couponInput");
+if(random == couponInput.value){
+totalAmount.innerHTML = totalAmountInt - 100;
+alert('Your Discount Success.');
+couponArea.style.display = "none";
+let message = document.getElementById("discountMessage");
+message.innerHTML = "<h4 style='color:green'>Your Discount Success full <br /> and Your Total Amount</h4>";
+document.getElementById("print").style.display = "block";
+// Increment Decrement button none
+document.getElementById('increment1').style.display = "none";
+document.getElementById('increment2').style.display = "none";
+document.getElementById('increment3').style.display = "none";
+document.getElementById('decrement1').style.display = "none";
+document.getElementById('decrement2').style.display = "none";
+document.getElementById('decrement3').style.display = "none";
+}else{
+ alert("Dash not match Coupon code");
+}
+}
+
+
+
+
+// Window Print function
+function printWindow(){
+ let confirmBox = confirm('Are You Seure Print, Click to Ok button.');
+ if(confirmBox){
+  window.print();
+ }else{
+ window.alert('Thank You for you Cancel.');
+ }
+}
+
+</script>
+</body>
+</html>

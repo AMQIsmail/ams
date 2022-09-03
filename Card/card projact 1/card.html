@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>card</title>
+<style type="text/css">
+*{
+ padding:0px;
+ margin:0px;
+ box-sizing:border-box;
+}
+body{
+ background:#000;
+}
+.product_container{
+ width:190px;
+ height:190px;
+ background-color:white;
+ margin-right:2px;
+ float:left;
+}
+.res_title{
+ font-size:18px;
+ margin-left:5px;
+ margin-bottom:5px;
+}
+.product_image_area{
+ width:100px;
+ height:60px;
+ margin-left:5px;
+ margin-bottom:10px;
+ box-shadow: 1px 1px 4px 1px red;
+ float:left;
+}
+.product_image{
+ width:50px;
+ margin:auto;
+}
+.product_image img{
+ width:50px;
+ margin-top:5px;
+ border-radius:50%;
+}
+.product_calculation{
+float:left;
+ margin-left:10px;
+}
+.product_calculation h3{
+ font-size:9px;
+}
+.input{
+ font-size:5px;
+}
+.item{
+ font-size:4px;
+}
+.clear{
+ clear:left;
+ margin-bottom:6px;
+ background:red;
+ width:100%;
+ height:1px;
+}
+.clear hr{
+ border: none;
+}
+
+.produos_container{
+ width:150px;
+ height:180px;
+ background-color:white;
+ float:left;
+}
+.produos_container h2{
+ font-size:8px;
+ margin-left:5px;
+ line-height:200%;
+}
+#icon1, 
+#icon2,
+#icon3,
+#icon4{
+font-size:7px;
+width:10px;
+}
+.totel_title{
+ font-size:10px;
+ margin-left:5px;
+}
+.copun{
+ font-size:3px;
+ margin-left:5px;
+}
+.discount{
+ font-size:6px;
+ margin-left:5px;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+</head>
+<body>
+<h1 style="color:#fff; text-align:center">card projact 1</h1>
+
+<div class='product_container'>
+<h1 class='res_title'>AMQ Restorent</h1>
+  <div class='product_image_area'>
+    <div class='product_image'>
+      <img src='img/pizza.jpg'>
+    </div>
+  </div>
+  <div class='product_calculation'>
+    <h3>Checan piza</h3>
+    <h3>Size: 6'</h3>
+    <h3>Price: <span id='price1'>200</span></h3>
+    <button id='icon1' onclick='increment("pizza_inc_dec", "price1", "item1")'>+</button>
+    <input class='input' type='button' id="pizza_inc_dec" value='0'>
+    <!--<i class="fa-solid fa-plus icon" onclick='increment("incDec1", "price1", "item1")'></i>-->
+    <!--<i class="fa fa-minus icon" aria-hidden="true" onclick='decrement("incDec1", "price1", "item1", "pro_amaount")'></i>-->
+     <button id='icon2' onclick='decrement("pizza_inc_dec", "price1", "item1")'>-</button>
+    <span class='item'>Your Items <span id='item1'>00</span></span>
+  </div>
+  
+  
+  <div class='clear'><hr /></div> 
+  
+  
+  
+  <div class='product_image_area'>
+  <div class='product_image'>
+  <img src='img/burger.jpg'>
+  </div>
+  </div>
+  <div class='product_calculation'>
+  <h3>Chicken Burger</h3>
+  <h3>Size: 5'</h3>
+  <h3>Price: <span id='price2'>300</span></h3>
+  <button id='icon3' onclick='increment("incdec", "price2", "item2")'>+</button>
+  <input class='input' type='button' id='incdec' value='0'>
+  <!--<i class="fa-solid fa-plus icon" onclick='increment("incDec2", "price2", "item2")'></i>-->
+  <!--<i class="fa fa-minus icon" aria-hidden="true" onclick='decrement("incDec2", "price2", "item2", "pro_amaount")'></i>-->
+  <button id='icon4' onclick='decrement("incdec", "price2", "item2")'>-</button>
+  <span class='item'>Your Items <span id='item2'>00</span></span>
+  </div>
+  <div class='clear'><hr /></div> 
+</div>
+
+
+
+
+<div class='produos_container'>
+ <h2 class='totel_title'>The totel Amaount of</h2>
+ <div class='clear'><hr /></div> 
+ 
+ <h2>Total Item Amount: <span id='total_item_amount'> 00</span></h2>
+ <h2>Shipping Charge: <span id='shipping'>50</span></h2>
+  <div class='clear'><hr /></div> 
+  
+  <h5 class='discount' id='discountSucess'>if shoping 1000 so discount 100 Tk.</h5>
+  <h2>Total Amount: <span id='total_amount'> 00</span></h2>
+  
+  
+  
+  <!--Coupon area-->
+ <div id='copun_main_div'>
+   <div style='text-align:center'><span style='color:green; font-size:4px;'>copun code</span></div>
+   <h6 class='discount'>Your copun code is: &nbsp
+   <script type="text/javascript">
+   let random = Math.random();
+   document.write( random);
+   </script>
+   </h6>
+   <input class='copun' type='text' id='copunInput' placeholder='Enter your copun vode'>
+   <button class='copun' id='apply'>Apply</button>
+ </div>
+</div>
+
+
+
+<script>
+// increment function
+function increment(pieceIncrement, singlePrics, itemStore){
+// piece price increment id
+ let increment = document.getElementById(pieceIncrement);
+ let price = document.getElementById(singlePrics);
+ let item = document.getElementById(itemStore);
+ 
+ // Item Shipping totalAmount id
+ let totalItemAmount = document.getElementById('total_item_amount');
+ let shipping = document.getElementById('shipping');
+ let totelAmaount = document.getElementById('total_amount');
+ 
+ // product condition
+ if(increment.value>=5){
+   increment.value = 5;
+   alert('maximum value alowd 5.');
+ }else{
+   // piece increment result 
+   increment.value++;
+   
+   // convert integer from string
+   let priceResult = parseInt(price.innerHTML);
+   let itemResult = parseInt(item.innerHTML);
+   let fullResult = priceResult + itemResult;
+   item.innerHTML = fullResult;
+   
+   // Total Item Amount Increment
+   let = totalItemAmountInt = parseInt(totalItemAmount.innerHTML);
+   let totalItem = totalItemAmount.innerHTML = totalItemAmountInt + priceResult;
+   
+   //Totel amaount with shipping charge increment
+   let shippingInt = parseInt(shipping.innerHTML);
+   let shippingItemAmount = shippingInt + totalItem;
+   totelAmaount.innerHTML = shippingItemAmount ;
+   
+   // Coupon Code condition
+   let copunMainDiv = document.getElementById('copun_main_div');
+   if(shippingItemAmount >= 1000){
+   copunMainDiv.style.display = 'block';
+   }
+   
+ }
+}
+
+
+
+
+
+
+//decrement function
+function decrement(dec, pric, itm){
+// increment price piece id
+ let count = document.getElementById(dec);
+ let price = document.getElementById(pric);
+ let itemPrice = document.getElementById(itm);
+ // item total amount id
+ let totalItemAmount = document.getElementById('total_item_amount');
+ let totelAmaount = document.getElementById('total_amount');
+ // minus condition
+ if(count.value<=0){
+   count.value = 0;
+   alert('minimum one value need.');
+ }else{
+   //card decrement result 
+   count.value--;
+   let priceResult = parseInt(price.innerHTML);
+   let result = parseInt(itemPrice.innerHTML)-priceResult;
+   itemPrice.innerHTML = result;
+   
+   // produos amaount minus
+  let produos_Int = parseInt(totalItemAmount.innerHTML);
+  totalItemAmount.innerHTML = produos_Int - priceResult;
+  
+  //Totel amaount decrement
+  let totalAmaount = parseInt(totelAmaount.innerHTML);
+  let minusTotalAmaount = totalAmaount - priceResult;
+  let delibaryMinusAmaount = totelAmaount.innerHTML = minusTotalAmaount;
+  if(delibaryMinusAmaount<=50){
+    totelAmaount.innerHTML = 0;
+  }
+  let copunMainDiv = document.getElementById('copun_main_div');
+  if(minusTotalAmaount <= 999){
+  copunMainDiv.style.display = 'none';
+  }
+ }
+}
+
+
+
+
+// coupon area and function
+let copunMainDiv = document.getElementById('copun_main_div');
+copunMainDiv.style.display = 'none';
+
+let applyBtn = document.getElementById("apply");
+applyBtn.addEventListener('click', function(){
+ let copunInpot = document.getElementById('copunInput');
+ let icon1 = document.getElementById('icon1');
+ let icon2 = document.getElementById('icon2');
+ let icon3 = document.getElementById('icon3');
+ let icon5 = document.getElementById('icon4');
+ let totelAmaount = document.getElementById('total_amount');
+ if(copunInpot.value == random){
+ totelAmaount.innerHTML = (totelAmaount.innerHTML - 100);
+ alert('Your discount is Seccesfull.');
+ document.getElementById('discountSucess').innerHTML = '<h4 style="color:green;">Your discount Seccess. <br />And Your Totel Price</h4>';
+ copunMainDiv.style.display = 'none';
+ icon1.style.display = 'none';
+ icon2.style.display = 'none';
+ icon3.style.display = 'none';
+ icon4.style.display = 'none';
+
+ }else{
+  alert('copun das not match');
+ }
+});
+</script>
+</body>
+</html>

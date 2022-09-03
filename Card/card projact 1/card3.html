@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>card 3</title>
+</head>
+<body>
+<h1 style="color:#000; text-align:center">card projact 3 <br> with dabble product</h1>
+
+<br>
+
+<div style="background: red; padding:30px; border-radius:10px">
+<h1>BARGER</h1>
+<h2>Barger Price: <span id="barger_price">200</span></h2>
+<h3>Barger Totel Price: <span id="barger_store">00</span></h3>
+<label>Item: </label>
+<input type='button' value="0" id="barger_inc_dec"><br><br>
+<button onclick="restorendIncrement('barger_inc_dec', 'barger_price', 'barger_store')">+</button>
+<button onclick="restorendDecrement('barger_inc_dec', 'barger_price', 'barger_store')">-</button>
+</div>
+
+<br>
+
+<div style="background: green; padding:30px; border-radius:10px">
+<h1>PIZE</h1>
+<h2>Piza Price: <span id="pize_price">300</span></h2>
+<h2>Pize Totel Price: <span id="pize_store">00</span></h2>
+<label>Item: </label>
+<input type='button' value="0" id="pize_inc_dec"><br><br>
+<button onclick="restorendIncrement('pize_inc_dec', 'pize_price', 'pize_store')">+</button>
+<button onclick="restorendDecrement('pize_inc_dec', 'pize_price', 'pize_store')">-</button>
+</div>
+
+
+
+<script>
+function restorendIncrement(incrementItem, singlePrice, storePrice){
+let increment = document.getElementById(incrementItem);
+let price = document.getElementById(singlePrice);
+let item = document.getElementById(storePrice);
+
+if (increment.value >= 5){
+  alert("maximum 5 product alow");
+  increment.value = 5;
+}else{
+ increment.value++;
+ let priceInt = Number(price.innerHTML);
+ let itemInt = Number(item.innerHTML);
+ let priceItemTotel = itemInt + priceInt;
+ item.innerHTML = priceItemTotel;
+}
+}
+
+
+
+function restorendDecrement(decrementItem, singlePrice, storePrice){
+let decrement = document.getElementById(decrementItem);
+let price = document.getElementById(singlePrice);
+let item = document.getElementById(storePrice);
+
+if (decrement.value <= 0){
+  alert("minimum 1 product need");
+  decrement.value = 0;
+}else{
+decrement.value--;
+  let priceInt = Number(price.innerHTML);
+  let itemInt = Number(item.innerHTML);
+  let priceItemTotel = itemInt - priceInt;
+  item.innerHTML = priceItemTotel;
+}
+}
+
+</script>
+</body>
+</html>
