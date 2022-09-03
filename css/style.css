@@ -15,7 +15,7 @@
 .click-to-top{
     position:fixed;
     bottom: 30px;
-    right: 1.5em;
+    right: 0.5em;
     text-decoration: none;
     display: none;
     z-index:99;
