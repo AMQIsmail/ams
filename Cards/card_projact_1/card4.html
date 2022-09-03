@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>card 3</title>
+<title>card 4</title>
 </head>
 <body>
-<h1 style="color:#000; text-align:center">card projact 3 <br> with dabble product</h1>
+<h1 style="color:#000; text-align:center">card projact 4<br> with Three products</h1>
 
 <br>
 
-<div style="background: red; padding:30px; border-radius:10px">
+<div style="background: #303030; padding:30px; border-radius:10px">
+<h1>GEREEL</h1>
+<h2>Gereel Price: <span id="gereel_price">100</span></h2>
+<h3>Gereel Totel Price: <span id="gereel_store">00</span></h3>
+<label>Item: </label>
+<input type='button' value="0" id="gereel_inc_dec"><br><br>
+<button onclick="restorendIncrement('gereel_inc_dec', 'gereel_price', 'gereel_store')">+</button>
+<button onclick="restorendDecrement('gereel_inc_dec', 'gereel_price', 'gereel_store')">-</button>
+</div>
+
+
+<br>
+
+<div style="background: blue; padding:30px; border-radius:10px">
 <h1>BARGER</h1>
 <h2>Barger Price: <span id="barger_price">200</span></h2>
 <h3>Barger Totel Price: <span id="barger_store">00</span></h3>
@@ -70,5 +83,10 @@ decrement.value--;
 }
 
 </script>
+
+
+
+<div class='clear'><hr /></div> 
+<button><a class="cart" href="card.html">Cart Home</a></button>
 </body>
 </html>

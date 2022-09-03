@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>card 7</title>
+<title>card 8</title>
 <style type="text/css">
+.about{
+ background:green;
+ border-radius:10px;
+ padding:10px;
+}
 button{
 background:green;
 color:black;
 font-size:25px; 
-width:80px; 
 height:40px;
 border:none; 
 border-radius:5px; 
@@ -56,11 +60,32 @@ border-radius:10px;
 color:#fff;
 font-size:20px;
 }
+#ismail{
+ width:150px;
+ height:150px;
+ border-radius:50%;
+}
+.ismail{
+width:30px;
+height:30px;
+border-radius:50%;
+}
+.itemImag{
+ width:200px;
+ height:130px;
+ border-radius:20px;
+}
 </style>
 </head>
 <body>
-<h6 style="color:#000; text-align:center">card projact 7<br> Add Coupon Area.</h6>
+<!--About Us-->
+<div class="about">
+   <center><img id="ismail" src="img/ismail.jpg"></center>
+   <h4 style="color:#fff; text-align:center">card projact 8<br> Add Images.</h4>
+</div>
 
+
+<br />
 
 <!--Total Item and Shipping and Total Amount Area-->
 <div style="background: #FF00FF; padding:20px; border-radius:10px">
@@ -71,7 +96,7 @@ font-size:20px;
   <h5 id="discountMessage">If 1000 Tk Shopping so Discount 100 Tk.</h5>
 </div>
 
-<br>
+<br />
 
 <!--Print area-->
      <div id="print">
@@ -79,11 +104,11 @@ font-size:20px;
        <button onclick="printWindow()">Print</button>
     </div>
 
-<br />
+
 
 <!--Discount Coupon Area-->
 <div id="coupon_area">
-  <h5>Your Coupon  Code is: 
+  <h5>Your Coupon  Code is: <br /><br />
   <span id="couponCode">
   <script>
   let random = Math.random();
@@ -95,14 +120,18 @@ font-size:20px;
   </h5>
 </div>
 
+
 <br />
+
 
 <!--chicken area-->
 <div style="background: #800080; padding:30px; border-radius:10px">
+<img class="ismail" src="img/ismail.jpg">
+<img class="itemImag" src="img/chicken.jpg">
 <h1>CHICKEN</h1>
 <h2>Chicken Price: <span id="chicken_price">100 </span>Tk</h2>
 <h3>Chicken Total Price: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id="chicken_store">0</span> Tk</h3>
-<label>Item: </label>
+<label>Piece: </label>
 <input type='button' class="item" value="0" id="chicken_inc_dec"><br><br>
 <button id="increment1" onclick="pieceIncrement('chicken_inc_dec', 'chicken_price', 'chicken_store')">+</button>
 <button id="decrement1" onclick="pieceDecrement('chicken_inc_dec', 'chicken_price', 'chicken_store')">-</button>
@@ -113,10 +142,12 @@ font-size:20px;
 
 <!--burger area-->
 <div style="background: #00FF00; padding:30px; border-radius:10px">
+<img class="ismail" src="img/ismail.jpg">
+<img class="itemImag" src="img/burger.jpg">
 <h1>BURGER</h1>
 <h2>Burger Price: <span id="burger_price">200 </span>Tk.</h2>
 <h3>Burger Total Price: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id="burger_store">0</span> Tk.</h3>
-<label>Item: </label>
+<label>Piece: </label>
 <input type='button' class="item" value="0" id="burger_inc_dec"><br><br>
 <button id="increment2" onclick="pieceIncrement('burger_inc_dec', 'burger_price', 'burger_store')">+</button>
 <button id="decrement2" onclick="pieceDecrement('burger_inc_dec', 'burger_price', 'burger_store')">-</button>
@@ -127,10 +158,12 @@ font-size:20px;
 
 <!--Pizza area-->
 <div style="background: #808000; padding:30px; border-radius:10px">
+<img class="ismail" src="img/ismail.jpg">
+<img class="itemImag" src="img/pizza.jpg">
 <h1>PIZZA</h1>
 <h2>Pizza Price: <span id="pizza_price">300 </span>Tk</h2>
 <h3>Pizza Total Price: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id="pizza_store">0</span> Tk.</h3>
-<label>Item: </label>
+<label>Piece: </label>
 <input type='button' class="item" value="0" id="pizza_inc_dec"><br><br>
 <button id="increment3" onclick="pieceIncrement('pizza_inc_dec', 'pizza_price', 'pizza_store')">+</button>
 <button id="decrement3" onclick="pieceDecrement('pizza_inc_dec', 'pizza_price', 'pizza_store')">-</button>
@@ -262,6 +295,8 @@ document.getElementById('increment3').style.display = "none";
 document.getElementById('decrement1').style.display = "none";
 document.getElementById('decrement2').style.display = "none";
 document.getElementById('decrement3').style.display = "none";
+}else{
+ alert("Dash not match Coupon code");
 }
 }
 
@@ -279,5 +314,10 @@ function printWindow(){
 }
 
 </script>
+
+
+
+<div class='clear'><hr /></div> 
+<button><a class="cart" href="card.html">Cart Home</a></button>
 </body>
 </html>
