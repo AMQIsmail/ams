@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+.container{
+            height: 100%;
+            display: grid;
+            
+         /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+         /* justify-content: right; */
+         /*align-content: bottom;*/
+         /* justify-items: right; */
+         /*align-items: bottom;*/
+         /* justify-self: right; */
+         /* align-self: bottom; */
+         grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+         grid-template-rows: repeat(1, 200px);
+         grid-auto-rows: 70px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="background-color: red; ">1</div>        
+        <div style="background-color: rgb(6, 6, 6);">2</div>        
+        <div style="background-color: rgb(200, 200, 200);">3</div>        
+        <div style="background-color: rgb(38, 255, 0);">4</div>        
+        <div style="background-color: rgb(255, 0, 230);">5</div>        
+        <div style="background-color: rgb(38, 0, 255);">6</div>        
+        <div style="background-color: rgb(0, 187, 255);">7</div>        
+        <div style="background-color: rgb(27, 23, 23);">8</div>        
+        <div style="background-color: rgb(157, 0, 255);">9</div>        
+        <div style="background-color: rgb(255, 247, 0);">10</div>        
+        <div style="background-color: rgb(0, 234, 255);">11</div>        
+        <div style="background-color: red;">12</div>        
+    </div>
+</body>
+</html>

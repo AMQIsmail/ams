@@ -1,17 +1,30 @@
 
 .nav_section{ /*if you use margin auto in nav tag, then your navigation center*/
-  width: 100%;
+ width: 100%;
   height: 80px;
   background-color: #e7e7e7;
   box-shadow:0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+  display: flex;
+}
+/*logo*/
+.logo{
+  width: 30%;
+}
+.logo img{
+  width: 200px;
+  margin-top: 5px;
+  margin-left: 10px;
 }
 /* =====TMENU ITEM DESIGN=====*/
+.nav_div{
+  width: 70%;
+  justify-content: right;
+}
 .ul_list{ 
   display: flex;  /*if you use display flex in ul tag, then your item list display show flex*/
   list-style: none; /*if you use list-style none in ul tag, then your item bolet point none*/
   margin-top: 0;
   margin-bottom: 0;
-  justify-content: right;
 }
 .item_link{
   padding: 2rem;
@@ -57,40 +70,8 @@
 
 
 /*responsive design mobile vertion*/
-@media only screen and (max-width : 640px){
-  .nav_section{
-      display: none;
-  }}
-
   @media only screen and (max-width : 640px){
-    .nav_section{
-      margin-top: 20px;
-      width: 100%;
-      background-color: #030303;
-      box-shadow:0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
-      }
-      .ul_list{ 
-        list-style: none; /*if you use list-style none in ul tag, then your item bolet point none*/
-        margin-top: -20px;
-        margin-bottom: -30px;
-        display: block;
-      }
-      .item_link{
-        font-weight: 700;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        margin: 2px;
-      }
-      .item-underlined::before, 
-      .item-underlined::after{
-        content: "";
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        background-color: rgb(255, 0, 0);
-        position: absolute;
-      }
+    
     }
 
 
