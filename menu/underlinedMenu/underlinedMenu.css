@@ -41,11 +41,11 @@ body{
   position: absolute;
 }
 .item-underlined::before{
-  left: 50%;
+  left: 100%;
   transform: translateX(50%); 
 }
 .item-underlined::after{
-  right: 50%;
+  right: 100%;
   transform: translateX(50%); 
 }
 /* =====ITEM UNDERLINED WHEN HOVER=====*/ 

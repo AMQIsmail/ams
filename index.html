@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>amq html projact</title>
 
    <!--scroll top to bottom-->
     <link rel="stylesheet"  href="css/bottomToTop.css" type="text/css"/>
     <!--Underline menu css file-->
-    <link rel="stylesheet"  href="css/underlinedMenu.css" type="text/css"/>
+    <link rel="stylesheet"  href="css/mainmenu.css" type="text/css"/>
     <!--style css-->
     <link rel="stylesheet"  href="css/style.css" type="text/css"/>
-
-
 </head>
 <body>
-
-<div class="nav_section">
-    <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-    <div class="nav_div">
-        <ul class="ul_list">
-            <li><a href="#" class="item_link item-underlined">demo1</a></li>
-            <li><a href="#" class="item_link item-underlined">demo2</a></li>
-            <li><a href="#" class="item_link item-underlined">demo3</a></li>
-            <li><a href="#" class="item_link item-underlined">demo4</a></li>
+<!--Responsive menu-->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="logo"><a href="#"><img src="images/logo.png"></a></div>
+        <button type="button" class="nav-toggle">
+          <span></span>
+        </button>
+      <nav>
+        <ul>
+          <li><a class="item-underlined" href="#">Home</a></li>
+          <li><a class="item-underlined" href="#">About</a></li>
+          <li><a class="item-underlined" href="#">Contact</a></li>
+          <li><a class="item-underlined" href="#">Privacy</a></li>
+          <li><a class="item-underlined" href="#">Blog</a></li>
         </ul>
+      </nav>
     </div>
-</div>   
+  </div>
+</header>
 
-    <div class="title"><h1>AMQ HTML PROJACT</h1></div>
-    <!--Bottom to top Arrow button (its requrde bottomToTop.js jquery.js bottomToTop.css bottomToTop.png)-->
-    <div class="bottom_to_top">
-        <a href="#" class="click-to-top"><img alt="Bottom-to-Top" src="images/bottomToTop.png"/></a>
-    </div>
+<!-- <div class="clear"></div> -->
+<div class="title"><h1>AMQ HTML PROJACT</h1></div>
+<!--Bottom to top Arrow button (its requrde bottomToTop.js jquery.js bottomToTop.css bottomToTop.png)-->
+ <div class="bottom_to_top">
+     <a href="#" class="click-to-top"><img alt="Bottom-to-Top" src="images/bottomToTop.png"/></a>
+ </div>
 
 <div>
 <h2>hello</h2>
@@ -71,25 +78,21 @@
 
 <!--Calvulators-->
 <a href="calculators_projact/calculator.html" target="_blank">Calculators</a>
-
 <br />
 <!--Carts-->
 <a href="Cards/card_projact_1/card.html" target="_blank">Cart</a>
-
 <br />
 <!--Confirm-->
 <a href="confirms_projact/confirm.html">Confirm</a>
-
 <br />
 <!--Menu-->
 <a href="menu/underlinedMenu/underlinedMenu.html">Menu</a>
-
 <br />
 <!--Grid-->
 <a href="grid/grid.html">Grid</a>
-
 <!--Bottom to top button-->
 <script src="js/jquery.js"></script>
 <script src="js/bottomToTop.js"></script>
+<script src="js/mainmenu.js"></script>
 </body>
 </html>
