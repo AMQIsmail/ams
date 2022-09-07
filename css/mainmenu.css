@@ -1,18 +1,4 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: sans-serif;
-    background-color: #e8eef3;
-}
 /*=================menu container===================*/
-.container{
-    max-width: 1170px;
-    margin: auto;
-}
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -21,7 +7,7 @@ body{
 }
 header .logo,
 header nav{
-    padding: 0 15px;
+    padding: 10 0px;
 }
 .logo img{
     width: 160px;
