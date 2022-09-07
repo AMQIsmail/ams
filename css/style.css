@@ -4,7 +4,7 @@
 }
 body{
     box-sizing: border-box;
-    background-color: rgb(222, 222, 222);
+    background-color: rgb(237, 237, 237);
     width: 100%;
   }
   /*==================  cooman css ====================*/
@@ -24,6 +24,7 @@ body{
     height:1px;
    }
 /*==================normal css====================*/
+/*company section*/
 .company-text h2{
   text-align: center;
   margin-top: 50px;
@@ -38,13 +39,13 @@ body{
 }
 .company-blog{
   display: flex;
-  margin-top: 15px;
-  
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 .company-blog .blog{
-  justify-content: space-between;
+  flex: 28%;
   text-align: center;
-  margin: 15px;
+  margin: 5px;
   padding: 40px 20px;
   background-color: bisque;
   border-radius: 10px;
@@ -60,4 +61,77 @@ body{
   margin-bottom: 10px;
   font-size: 20px;
   color: black;
+}
+/*company section Responsive design*/
+@media only screen and (min-width:0px) and (max-width: 576px){
+  .company-blog .blog{
+    background-color: rgb(200, 0, 194);
+    flex: 100%;
+  }
+  .company-blog .blog:hover{
+    background-color: rgb(205, 78, 225);
+  }
+  .company-blog .blog h2:hover,
+  .company-blog .blog p:hover{
+    color: #fff;
+  }
+}
+
+/*==================  foter ====================*/
+.foter{
+  background: rgb(21, 17, 41);
+  width: 100%;
+  margin-top: 10px;
+}
+.foter-parent{
+  display: flex;
+  flex-wrap: wrap;
+}
+.foter-left{
+  flex: 50%;
+  margin: 20px 30px;
+  line-height: 25px;
+}
+.foter-left a{
+  color: rgb(217, 216, 216);
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.foter-left a:hover{
+  color: rgb(76, 128, 76);
+  font-size: 16px;
+}
+.foter-right img{
+   margin-top: 20px;
+   width: 100px;
+   border-radius: 50%;
+   margin-right: 30px;
+}
+.powerd{
+  text-align: center;
+  padding: 20px;
+}
+.powerd a{
+   text-decoration: none;
+   font-size: 22px;
+   color: rgb(49, 89, 58);
+}
+.powerd a:hover{
+  color: rgb(73, 103, 80);
+  font-size: 21px;
+}
+@media only screen and (min-width:0px) and (max-width: 576px){
+  .foter{
+    border-radius: 5px;
+    padding-bottom: 20px;
+  }
+  .foter-left{
+    flex: 100%;
+    text-align: center;
+  }
+  .foter-right{
+    flex: 100%;
+    text-align: center;
+  }
 }
