@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssFlexBox</title>
+    <style>
+     .containerWithFlexBox{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: black;
+        padding: 10px;
+     }
+     .containerWithFlexBox > div{
+        width: 100px;
+        height: 50px;
+        background-color: blanchedalmond;
+        margin: 5px;
+        text-align: center;
+     }
+    </style>
+</head>
+<body>
+    <div class="containerWithFlexBox">
+        <div class="childOne"><a href="direction-column.html">direction column</a></div>
+        <div class="childTwo"><a href="direction-column-reverse.html">direction column reverse</a></div>
+        <div class="childThree"><a href="direction-row.html">direction row</a></div>
+        <div class="childFour"><a href="direction-row-reverse.html">direction row reverse</a></div>
+        <div class="childFive">5</div>
+        <div class="childSix">6</div>
+        <div class="childSeven">7</div>
+        <div class="childEight">8</div>
+    </div>
+</body>
+</html>
