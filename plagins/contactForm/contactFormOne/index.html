@@ -2,10 +2,15 @@
 <html>
 <head>
 <title>contact</title>
+<style>
+  .alert{
+    display: none;
+  }
+</style>
 </head>
 <body>
-<h2>hello</h2>
 <form action="" id="contactFormHtml">
+ <div class="alert">Your Message Send Seccess.</div>
   <input id="nameId" type="text" placeholder="Enter yoir name...">
   <br><br>
   <input id="emailId" type="email" placeholder="Enter your email...">
@@ -52,7 +57,11 @@
     //save contact information
     saveMassage(name, email, message);
      //message seccess alert
-    //document.querySelector(".alert").style.display = "block";
+    document.querySelector(".alert").style.display = "block";
+    //set time out none
+    setTimeout(() => {
+      document.querySelector(".alert").style.display = "none";
+    }, 5000);
     console.log(name, email, message);
  }
 
