@@ -5,10 +5,10 @@
     justify-content: space-between;
     align-items: center;
 }
-header .logo,
+/* header .logo,
 header nav{
-    padding: 10 0px;
-}
+    padding: 5px 0;
+} */
 .logo img{
     width: 160px;
 }
