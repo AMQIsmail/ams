@@ -83,7 +83,7 @@ header nav ul li a:hover{
     }
     header{
         background-color: rgb(90, 165, 105);
-        border-radius: 5px;
+        border-radius: 2px;
     }
     header nav{
         width: 100%;
