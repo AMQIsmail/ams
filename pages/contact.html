@@ -159,7 +159,7 @@
                 margin: 0;
                 padding: 0;
                 width: 100%;
-                background: url();
+                background: url(../images/back.jpg);
                 background-size: cover;
             }
             .container{
@@ -183,117 +183,122 @@
             font-weight: 300;
             font-size: 18px;
         }
+        .mobile-width{
+            width: 100%;
+        }
         }
     </style>
 </head>
 <body>
-    <!--Bottom to top Arrow button (its requrde bottomToTop.js jquery.js bottomToTop.css bottomToTop.png)-->
- <div class="bottom_to_top">
-    <a href="#" class="click-to-top"><img alt="Bottom-to-Top" src="../images/bottomToTop.png"/></a>
-</div>
-     <!--Responsive menu-->
-        <header>
-            <div class="custom-container">
-              <div class="row">
-                <div class="logo"><a href="../index.html"><img src="../images/logo.png"></a></div>
-                  <button type="button" class="nav-toggle">
-                    <span></span>
-                  </button>
-                <nav>
-                  <ul>
-                    <li><a class="item-underlined" href="../index.html">Home</a></li>
-                    <li><a class="item-underlined" href="../Cards/card_projact_1/card9.html">Restaurant</a></li>
-                    <li><a class="item-underlined" href="../calculators_projact/calculator.html">Calculation</a></li>
-                    <li><a class="item-underlined" href="../portfolio/home.html">Portfolio</a></li>
-                    <li><a class="item-underlined" href="../pages/contact.html">Contact</a></li>
-                    <!-- <li><a class="item-underlined" href="#">Blog</a></li> -->
-                  </ul>
-                </nav>
-              </div>
+<div class="mobile-width">
+     <!--Bottom to top Arrow button (its requrde bottomToTop.js jquery.js bottomToTop.css bottomToTop.png)-->
+     <div class="bottom_to_top">
+        <a href="#" class="click-to-top"><img alt="Bottom-to-Top" src="../images/bottomToTop.png"/></a>
+    </div>
+         <!--Responsive menu-->
+            <header>
+                <div class="custom-container">
+                  <div class="row">
+                    <div class="logo"><a href="../index.html"><img src="../images/logo.png"></a></div>
+                      <button type="button" class="nav-toggle">
+                        <span></span>
+                      </button>
+                    <nav>
+                      <ul>
+                        <li><a class="item-underlined" href="../index.html">Home</a></li>
+                        <li><a class="item-underlined" href="../Cards/card_projact_1/card9.html">Restaurant</a></li>
+                        <li><a class="item-underlined" href="../calculators_projact/calculator.html">Calculation</a></li>
+                        <li><a class="item-underlined" href="../portfolio/home.html">Portfolio</a></li>
+                        <li><a class="item-underlined" href="../pages/contact.html">Contact</a></li>
+                        <!-- <li><a class="item-underlined" href="#">Blog</a></li> -->
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </header>
+        <!-- ================ contact form =======================-->
+        <section class="contact">
+            <div class="content">
+                <h2>Contact Us</h2>
+                <p>Is is our contact form, It is my of company contact form.
+                   It is Responsive cline design my contry is Bangladesh.
+                   my name is Ismail saheb I am a webdesigner.</p>
             </div>
-          </header>
-    <!-- ================ contact form =======================-->
-    <section class="contact">
-        <div class="content">
-            <h2>Contact Us</h2>
-            <p>Is is our contact form, It is my of company contact form.
-               It is Responsive cline design my contry is Bangladesh.
-               my name is Ismail saheb I am a webdesigner.</p>
-        </div>
-
-        <div class="container">
-            <div class="contactInfo">
-                <div class="box">
-                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <div class="text">
-                        <h3>Address:</h3>
-                        <p>Bangladesh,<br /> Brhamanbaria, Bancharumpur,<br /> Vhorvhorea 15 No: word</p>
+    
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="text">
+                            <h3>Address:</h3>
+                            <p>Bangladesh,<br /> Brhamanbaria, Bancharumpur,<br /> Vhorvhorea 15 No: word</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+                        <div class="text">
+                            <h3>Email:</h3>
+                            <p>ismailsaheb745@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Phone:</h3>
+                            <p>+801789602812</p>
+                        </div>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="icon"><i class="fa-regular fa-envelope"></i></div>
-                    <div class="text">
-                        <h3>Email:</h3>
-                        <p>ismailsaheb745@gmail.com</p>
+    
+                <form id="contactFormHtml" action="">
+                    <div class="alert">Your Message Send Seccess.</div>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" id="nameId" required="required">
+                        <span>Enter Your Name...</span>
                     </div>
-                </div>
-                <div class="box">
-                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                    <div class="text">
-                        <h3>Phone:</h3>
-                        <p>+801789602812</p>
+                    <div class="inputBox">
+                        <input type="email" id="emailId" required="required">
+                        <span>Enter Your Email...</span>
                     </div>
-                </div>
+                    <div class="inputBox">
+                        <textarea type="email" id="mesId" required="required"></textarea>
+                        <span>Write Your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                       <input type="submit" name="" value="Send">
+                    </div>
+                </form>
             </div>
-
-            <form id="contactFormHtml" action="">
-                <div class="alert">Your Message Send Seccess.</div>
-                <h2>Send Message</h2>
-                <div class="inputBox">
-                    <input type="text" id="nameId" required="required">
-                    <span>Enter Your Name...</span>
-                </div>
-                <div class="inputBox">
-                    <input type="email" id="emailId" required="required">
-                    <span>Enter Your Email...</span>
-                </div>
-                <div class="inputBox">
-                    <textarea type="email" id="mesId" required="required"></textarea>
-                    <span>Write Your Message...</span>
-                </div>
-                <div class="inputBox">
-                   <input type="submit" name="" value="Send">
-                </div>
-            </form>
-        </div>
-    </section>
-    <!--==================  foter design  =====================-->
-<div class="foter">
-    <div class="custom-container foter-parent">
-        <div class="foter-left">
-            <!--Calvulators-->
-            <a href="../calculators_projact/calculator.html" target="_blank">Calculators</a>
-            <br />
-            <!--Carts-->
-            <a href="../Cards/card_projact_1/card9.html" target="_blank">Cart</a>
-            <br />
-            <!--Confirm-->
-            <a href="../confirms_projact/confirm.html">Confirm</a>
-            <br />
-            <!--Menu-->
-            <a href="../menu/underlinedMenu/boxMenu/boxMenu.html">Menu</a>
-            <br />
-            <!--Grid-->
-            <a href="../grid/grid.html">Grid</a>
-            <br />
-            <!--Flex Box-->
-            <a href="../cssFlexBox/cssFlexBox.html">Flex Box</a><a style="font-size: 30px; color:red" href="../plagins/section-one/index.html">.</a>
-        </div>
-        <div class="foter-right">
-             <img src="../images/ismailD.jpg">
-        </div>
-      </div>
-      <div class="powerd"><a href="https://amqismail.github.io/ams/">Powered by Md Ismail Saheb</a></div>
+        </section>
+        <!--==================  foter design  =====================-->
+    <div class="foter">
+        <div class="custom-container foter-parent">
+            <div class="foter-left">
+                <!--Calvulators-->
+                <a href="../calculators_projact/calculator.html" target="_blank">Calculators</a>
+                <br />
+                <!--Carts-->
+                <a href="../Cards/card_projact_1/card9.html" target="_blank">Cart</a>
+                <br />
+                <!--Confirm-->
+                <a href="../confirms_projact/confirm.html">Confirm</a>
+                <br />
+                <!--Menu-->
+                <a href="../menu/underlinedMenu/boxMenu/boxMenu.html">Menu</a>
+                <br />
+                <!--Grid-->
+                <a href="../grid/grid.html">Grid</a>
+                <br />
+                <!--Flex Box-->
+                <a href="../cssFlexBox/cssFlexBox.html">Flex Box</a><a style="font-size: 30px; color:red" href="../plagins/section-one/index.html">.</a>
+            </div>
+            <div class="foter-right">
+                 <img src="../images/ismailD.jpg">
+            </div>
+          </div>
+          <div class="powerd"><a href="https://amqismail.github.io/ams/">Powered by Md Ismail Saheb</a></div>
+    </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
