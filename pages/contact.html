@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!--scroll top to bottom-->
+    <link rel="stylesheet"  href="../css/bottomToTop.css" type="text/css"/>
+    <!--Underline menu css file-->
+    <link rel="stylesheet"  href="../css/mainmenu.css" type="text/css"/>
+    <!--style css-->
+    <link rel="stylesheet"  href="../css/style.css" type="text/css"/>
+    <title>Contact page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;  
+        }
+        /*===============top text area=====================*/
+        .contact{
+            position: relative;
+            min-height:100vh;
+            paddding:50px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: url(../images/background-nodi-2.jpg);
+            background-size: cover;
+        }
+        .contact .content{
+            max-width: 700px;
+            text-align: center;
+        }
+        .contact .content h2{
+            font-size: 35px;
+            font-weight: 500;
+            color: aliceblue;
+        }
+        .contact .content p{
+            font-size: 20px;
+            font-weight: 300;
+            color: aliceblue;
+        }
+        /*=============== contact container area =====================*/
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        /*=============== contact left Info area =====================*/
+        .container .contactInfo{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .container .contactInfo .box{
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+        }
+        .container .contactInfo .box .icon{
+            min-width: 60px;
+            height: 60px;
+            background-color: rgb(82, 167, 127);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 25px;
+            color: rgb(0, 89, 35);
+        }
+        .container .contactInfo .box .text{
+            display: flex;
+            margin-left: 29px;
+            font-size: 18px;
+            flex-direction: column;
+            font-weight: 300;
+            color: rgb(255, 255, 255);
+        }
+        .container .contactInfo .box .text h3{
+            color: rgb(68, 176, 122);
+            font-weight: 700;
+        }
+        /*=============== contact form Input righte area =====================*/
+        #contactFormHtml{
+           width: 40%;
+           padding: 40px;
+           background-color: rgba(8, 8, 8, 0.5) !important;
+           border-radius: 10px;
+        }
+        #contactFormHtml h2{
+            font-size: 30px;
+            color: rgb(0, 119, 26);
+            font-weight: 500;
+        }
+        .inputBox{
+            position: relative;
+            width:100%;
+            margin-top: 10px;
+        }
+        .inputBox textarea,
+        .inputBox input{
+            width: 100%;
+            padding: 5px 0;
+            font-size: 17px;
+            margin: 10px 0;
+            border: none;
+            outline: none;
+            background-color: rgba(21, 18, 63, 0.5) !important;
+            padding: 10px;
+            resize: none;
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+        }
+        .inputBox span{
+            position: absolute;
+            left: 0;
+            padding: 5px 5px;
+            font-size: 17px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 0.5s;
+            color: rgb(255, 255, 255);
+        }
+        .inputBox input:focus ~ span,
+        .inputBox input:valid ~ span,
+        .inputBox textarea:focus ~ span,
+        .inputBox textarea:valid ~ span{
+            color: green;
+            font-size: 14px;
+            transform: translateY(-20px);
+        }
+        .inputBox input[type="submit"]{
+            width: 150px;
+            background-color: rgb(77, 163, 77);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding:10px;
+            font-size: 18px;
+        }
+        .alert{
+            background-color: rgb(126, 189, 126);
+            padding: 7px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            color: green;
+            text-align: center;
+            display: none;
+        }
+        /*=============== contact form Responsive area =====================*/
+        @media (max-width:992px){
+            .contact{
+                padding: 50px;
+            }
+            .container{
+                flex-direction: column;
+            }
+            .container .contactInfo{
+                margin-bottom: 40px;
+            }
+            .container .contactInfo,
+            .container #contactFormHtml{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--Bottom to top Arrow button (its requrde bottomToTop.js jquery.js bottomToTop.css bottomToTop.png)-->
+ <div class="bottom_to_top">
+    <a href="#" class="click-to-top"><img alt="Bottom-to-Top" src="../images/bottomToTop.png"/></a>
+</div>
+     <!--Responsive menu-->
+        <header>
+            <div class="custom-container">
+              <div class="row">
+                <div class="logo"><a href="../index.html"><img src="../images/logo.png"></a></div>
+                  <button type="button" class="nav-toggle">
+                    <span></span>
+                  </button>
+                <nav>
+                  <ul>
+                    <li><a class="item-underlined" href="../index.html">Home</a></li>
+                    <li><a class="item-underlined" href="../Cards/card_projact_1/card9.html">Restaurant</a></li>
+                    <li><a class="item-underlined" href="../calculators_projact/calculator.html">Calculation</a></li>
+                    <li><a class="item-underlined" href="../portfolio/home.html">Portfolio</a></li>
+                    <li><a class="item-underlined" href="../pages/contact.html">Contact</a></li>
+                    <!-- <li><a class="item-underlined" href="#">Blog</a></li> -->
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </header>
+    <!-- ================ contact form =======================-->
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Is is our contact form, It is my of company contact form.
+               It is Responsive cline design my contry is Bangladesh.
+               my name is Ismail saheb I am a webdesigner.</p>
+        </div>
+
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Address:</h3>
+                        <p>Bangladesh,<br /> Brhamanbaria, Bancharumpur,<br /> Vhorvhorea 15 No: word</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email:</h3>
+                        <p>ismailsaheb745@gmail.com</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone:</h3>
+                        <p>+801789602812</p>
+                    </div>
+                </div>
+            </div>
+
+            <form id="contactFormHtml" action="">
+                <div class="alert">Your Message Send Seccess.</div>
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" id="nameId" required="required">
+                    <span>Enter Your Name...</span>
+                </div>
+                <div class="inputBox">
+                    <input type="email" id="emailId" required="required">
+                    <span>Enter Your Email...</span>
+                </div>
+                <div class="inputBox">
+                    <textarea type="email" id="mesId" required="required"></textarea>
+                    <span>Write Your Message...</span>
+                </div>
+                <div class="inputBox">
+                   <input type="submit" name="" value="Send">
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--==================  foter design  =====================-->
+<div class="foter">
+    <div class="custom-container foter-parent">
+        <div class="foter-left">
+            <!--Calvulators-->
+            <a href="../calculators_projact/calculator.html" target="_blank">Calculators</a>
+            <br />
+            <!--Carts-->
+            <a href="../Cards/card_projact_1/card9.html" target="_blank">Cart</a>
+            <br />
+            <!--Confirm-->
+            <a href="../confirms_projact/confirm.html">Confirm</a>
+            <br />
+            <!--Menu-->
+            <a href="../menu/underlinedMenu/boxMenu/boxMenu.html">Menu</a>
+            <br />
+            <!--Grid-->
+            <a href="../grid/grid.html">Grid</a>
+            <br />
+            <!--Flex Box-->
+            <a href="../cssFlexBox/cssFlexBox.html">Flex Box</a><a style="font-size: 30px; color:red" href="../plagins/section-one/index.html">.</a>
+        </div>
+        <div class="foter-right">
+             <img src="../images/ismailD.jpg">
+        </div>
+      </div>
+      <div class="powerd"><a href="https://amqismail.github.io/ams/">Powered by Md Ismail Saheb</a></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+<script>
+  // Import the functions you need from the SDKs you need
+          //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyANiNSscdOpyIO3yvkFmnz1XpI4SOZTAvE",
+    authDomain: "contact-577db.firebaseapp.com",
+    databaseURL: "https://contact-577db-default-rtdb.firebaseio.com",
+    projectId: "contact-577db",
+    storageBucket: "contact-577db.appspot.com",
+    messagingSenderId: "197323093489",
+    appId: "1:197323093489:web:b3492ab8cbd6f48d410050"
+  };
+
+  // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+ 
+ // connection database in firebase
+ let contactFormDB = firebase.database().ref("contactForm");
+ 
+ 
+ //connection HTML form of Id
+ document.getElementById("contactFormHtml").addEventListener("submit", submitForm);
+ function submitForm(e){
+    e.preventDefault();
+    let name = getElementVal('nameId');
+    let email = getElementVal('emailId');
+    let message = getElementVal('mesId');
+    //save contact information
+    saveMassage(name, email, message);
+     //message seccess alert
+    document.querySelector(".alert").style.display = "block";
+    //set time out none
+    setTimeout(() => {
+      document.querySelector(".alert").style.display = "none";
+    }, 5000);
+	// form reset
+	 document.getElementById("contactFormHtml").reset();
+    console.log(name, email, message);
+ }
+
+ //information push in firebase database
+ const saveMassage = (name, email, message) => {
+    let newContactForm = contactFormDB.push();
+    newContactForm.set({
+      name : name,
+      email : email,
+      message : message,
+    });
+ };
+ // connection id attrivute
+ const getElementVal = (id) => {
+  return document.getElementById(id).value;
+ }
+ </script>
+
+<!--Bottom to top button-->
+<script src="../js/jquery.js"></script>
+<script src="../js/bottomToTop.js"></script>
+<!--main menu js-->
+<script src="../js/mainmenu.js"></script>
+</body>
+</html>

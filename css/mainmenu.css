@@ -13,15 +13,20 @@ header nav{
     width: 160px;
 }
 header{
-    background-color: #c4c4c4;
+    background-color: rgba(26, 19, 106, 0.5);
 }
+/*sticky header*/
+.stick-header{
+    position: sticky;
+    top: 0;
+  }
 /*nav*/
 header nav ul li{
     display: inline;
 }
 header nav ul li a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 2rem 1rem;
     font-size: 15px;
     transition: all 0.5s ease;
@@ -29,7 +34,7 @@ header nav ul li a{
     text-transform: uppercase;
 }
 header nav ul li a:hover{
-    color: rgb(101, 148, 91);
+    color: rgb(78, 175, 56);
 }
 /*==================nav toggle button=======================*/
 .nav-toggle{
@@ -76,10 +81,15 @@ header nav ul li a:hover{
     .nav-toggle{
         display: block;
     }
+    header{
+        background-color: rgb(90, 165, 105);
+        border-radius: 10px;
+        margin: 0 2px;
+    }
     header nav{
         width: 100%;
         max-height: 0;
-        padding: 0;
+        padding: 0 3px;
         overflow: hidden;
         visibility: hidden;
         transition: all 0.5s ease;
