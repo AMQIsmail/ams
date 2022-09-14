@@ -2,7 +2,12 @@
 <html>
 <head>
 <title>card 9</title>
-<style type="text/css">
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   .restuarent-container{
     display: flex;
     flex-wrap: wrap;
@@ -31,12 +36,171 @@ border-radius:5px;
 outline:none;
 }
   }
-/*About*/
-.about{
- background:green;
- border-radius:10px;
- padding:10px;
+/*====================== About and Total Amount area ======================*/
+.about-container{
+   display: flex;
+   max-width: 1320px;
+   margin: 10px auto;
 }
+.about{
+ width: 50%;
+ background:rgb(99, 205, 99);
+ border-radius:5px;
+}
+/*User style*/
+#userArea{
+margin:0 auto;
+background:rgb(116, 202, 108);
+padding:5px;
+border-radius:5px;
+}
+#user{
+ color: rgb(1, 56, 1);
+ text-align:center;
+ font-size: 20px;
+}
+.total-amount{
+  width: 50%;
+  border-radius:5px;
+  margin-left: 10px;
+  background-color: rgb(216, 210, 35);
+  padding: 15px 0;
+}
+.total-amount #total_item_amount{
+  background:black; 
+  color:#fff; 
+  padding:5px; 
+  border-radius:5px
+}
+.total-amount h3{
+  padding-left: 10px;
+}
+.to-title{
+  background:black; 
+  color: #fff; 
+  padding:20px;
+  border-radius:10px
+}
+#total_amount{
+  background:#fff; 
+  color:black; 
+  padding:5px; 
+  border-radius:5px;
+}
+#discountMessage{
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+@media (max-width:576px){
+  .about-container{
+    margin-top: 0;
+    flex-direction: column;
+  }
+  .about{
+ width: 100%;
+ background:rgb(243, 83, 219);
+}
+.total-amount{
+  width: 100%;
+  margin: 5px;
+  margin-left: 0;
+}
+
+}
+/*======================copun area======================*/
+/*Coupon area*/
+.coponArea{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ max-width: 1320px;
+ background:black;
+ color:#fff;
+ padding:20px 0;
+ border-radius:10px;
+ margin: auto;
+ overflow: hidden;
+}
+.coponAreaLeft {
+    float: left;
+    width: 40%;
+}
+.coponAreaRight{
+  float: right;
+  width: 50%;
+}
+.copun-title{
+  font-size: 20px;
+
+}
+#couponCode{
+  font-size: 20px;
+}
+#couponApply{
+ background:#808000;
+ width: 100px;
+ font-size: 16px;
+ cursor: pointer;
+}
+#couponInput{
+ padding-bottom:10px;
+ padding:12px;
+ border:none;
+ outline:none;
+ border-radius:5px;
+}
+/*Print area*/
+#print{
+max-width: 1320px;
+margin: auto;
+display:none;
+background: #9be398;
+padding:20px;
+border-radius:5px;
+}
+#print h6{
+color:#fff;
+font-size:18px;
+}
+#print button{
+  cursor: pointer;
+  width: 100px;
+  background-color: #000000;
+  padding: 5px;
+  color: #fff;
+  font-size: 18px;
+}
+@media (max-width:992px){
+  .coponArea{
+    width: 100%;
+  }
+  #print{
+    width: 100%;
+  }
+  #print h6{
+   margin-bottom: 5px;
+}
+}
+@media (max-width:650px){
+  .coponArea{
+    width: 100%;
+    flex-direction: column;
+  }
+  .coponAreaRight{
+    margin-top: 20px;
+}
+.coponAreaRight #couponApply{
+  margin-top: 10px;
+}
+}
+
+
+
+
+
+
 button{
 background:green;
 color:black;
@@ -61,38 +225,6 @@ border:none;
 outline:none;
 font-size:20px;
 }
-/*Coupon area*/
-#coupon{
- font-size:14px;
-}
-#coupon_area{
- background:black;
- color:#fff;
- padding:20px;
- border-radius:10px;
-}
-#couponApply{
- background:#808000;
- width: 100px;
-}
-#couponInput{
- padding-top:10px;
- padding-bottom:10px;
- padding-left:5px;
- width:200px;
- border:none;
- outline:none;
- border-radius:5px;
-}
-/*Print area*/
-#print{
-display:none;
-background: #808000;
-padding:20px;
-border-radius:10px;
-color:#fff;
-font-size:20px;
-}
 /*images item and man*/
 #ismail{
  width:150px;
@@ -109,21 +241,43 @@ border-radius:50%;
  height:100px;
  border-radius:20px;
 }
-/*User style*/
-#userArea{
-margin:0 auto;
-background:#fff;
-padding:10px;
-border-radius:5px;
-}
-#user{
- color: green;
- text-align:center;
-}
 </style>
+<!--scroll top to bottom-->
+<link rel="stylesheet"  href="../../css/bottomToTop.css" type="text/css"/>
+<!--Underline menu css file-->
+<link rel="stylesheet"  href="../../css/mainmenu.css" type="text/css"/>
+<!--style css-->
+<link rel="stylesheet"  href="../../css/style.css" type="text/css"/>
 </head>
 <body>
-   <!--About Us-->
+<!--Responsive menu-->
+<header class="stick-header">
+  <div class="custom-container">
+    <div class="row">
+      <div class="logo"><a href="#"><img src="../../images/logo.png"></a></div>
+        <button type="button" class="nav-toggle">
+          <span></span>
+        </button>
+      <nav>
+        <ul>
+          <li><a class="item-underlined" href="../../index.html">Home</a></li>
+          <li><a class="item-underlined" href="../../Cards/card_projact_1/card9.html">Restaurant</a></li>
+          <li><a class="item-underlined" href="../../calculators_projact/calculator.html">Calculation</a></li>
+          <li><a class="item-underlined" href="../../portfolio/home.html">Portfolio</a></li>
+          <li><a class="item-underlined" href="../../pages/contact.html">Contact</a></li>
+          <!-- <li><a class="item-underlined" href="#">Blog</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<!--Bottom to top Arrow button (its requrde bottomToTop.js jquery.js bottomToTop.css bottomToTop.png)-->
+<div class="bottom_to_top">
+  <a href="#" class="click-to-top"><img alt="Bottom-to-Top" src="../../images/bottomToTop.png"/></a>
+</div>
+
+<div class="about-container">
+     <!--About Us-->
 <div class="about">
   <center><img id="ismail" src="img/ismail.jpg"></center>
   <h4 style="color:#fff; text-align:center">card projact 9<br> Add prompt with user Name.</h4>
@@ -134,19 +288,15 @@ border-radius:5px;
   </div>
 </div>
 
-
-<br />
-
 <!--Total Item and Shipping and Total Amount Area-->
-<div style="background: #FF00FF; padding:20px; border-radius:10px">
-<h3>Total Item Amount: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id='total_item_amount'>0</span> Tk.</h3>
- <hr /><h3>Shipping Charge: <span id='shipping'> 50</span> Tk. <hr /></h3>
- <h3 style="background:black; color: #fff; padding:20px;border-radius:10px">
- Total Amount = <span style="background:#fff; color:black; padding:5px; border-radius:5px" id="total_amount">0</span> Tk.</h3><hr />
+<div class="total-amount">
+<h3 style>Total Item Amount: <span id='total_item_amount'>0</span> Tk.</h3><hr />
+<h3>Shipping Charge: <span id='shipping'> 50</span> Tk.</h3><hr />
+<h4 class="to-title">Total Amount = <span id="total_amount">0</span> Tk.</h4><hr />
  <h5 id="discountMessage">If 1000 Tk Shopping so Discount 100 Tk.</h5>
 </div>
+</div>
 
-<br />
 
 <!--Print area-->
     <div id="print">
@@ -154,24 +304,43 @@ border-radius:5px;
       <button onclick="printWindow()">Print</button>
    </div>
 
-
-
 <!--Discount Coupon Area-->
-<div id="coupon_area">
- <h5>Your Coupon  Code is: <br /><br />
- <span id="couponCode">
- <script>
- let random = Math.random();
- document.write(random);
- </script>
- </span>
- <input type="text" id="couponInput" placeholder="Enter Your Coupon Code...">
- <button id="couponApply" onclick="discountCoupon()">Apply</button>
- </h5>
+<div class="coponArea" id="coupon_area">
+    <div class="coponAreaLeft">
+      <h5 class="copun-title">Your Coupon  Code is: <br /><br />
+          <span id="couponCode">
+              <script>
+                  let random = Math.random();
+                  document.write(random);
+              </script>
+           </span>
+       </h5>
+    </div>
+    <div class="coponAreaRight">
+        <input type="text" id="couponInput" placeholder="Enter Your Coupon Code...">
+        <button id="couponApply" onclick="discountCoupon()">Apply</button>
+    </div>
 </div>
 
 
-<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div class="restuarent-container">
@@ -227,168 +396,180 @@ border-radius:5px;
 
 
 
-
+<!--==================  foter section  =====================-->
+<div class="foter">
+  <div class="custom-container foter-parent">
+      <div class="foter-left">
+          <!--Calvulators-->
+          <a href="../../calculators_projact/calculator.html" target="_blank">Calculators</a>
+          <br />
+          <!--Carts-->
+          <a href="../../Cards/card_projact_1/card9.html" target="_blank">Cart</a>
+          <br />
+          <!--Confirm-->
+          <a href="../../confirms_projact/confirm.html">Confirm</a>
+          <br />
+          <!--Menu-->
+          <a href="../../menu/underlinedMenu/boxMenu/boxMenu.html">Menu</a>
+          <br />
+          <!--Grid-->
+          <a href="../../grid/grid.html">Grid</a>
+          <br />
+          <!--Flex Box-->
+          <a href="../../cssFlexBox/cssFlexBox.html">Flex Box</a><a style="font-size: 30px; color:red" href="../../plagins/section-one/index.html">.</a>
+      </div>
+      <div class="foter-right">
+           <img src="../../images/ismailD.jpg">
+      </div>
+    </div>
+    <div class="powerd"><a href="https://amqismail.github.io/ams/">Powered by Md Ismail Saheb</a></div>
+</div>
 
 
 <script>
-// prompt with user area
-let user = prompt("Pleass Enter Your Name...");
-if(user){
-document.getElementById("user").innerHTML = "Hello, " + "' "+user+" ' " + " Welcome Our Website.";
-}else{
-let userArea = document.getElementById("userArea");
-userArea.style.display = 'none';
-}
-
-
-
-
-
-
-// Increment function
-function pieceIncrement(incrementPiece, singlePrice, storePiece){
-// increment price pieceStore id
-let increment = document.getElementById(incrementPiece);
-let price = document.getElementById(singlePrice);
-let pieceStore = document.getElementById(storePiece);
-
-// condition
-if (increment.value >= 5){
-  alert("maximum 5 product alow");
-  increment.value = 5;
-}else{
- increment.value++;
- // convert
- let priceInt = Number(price.innerHTML);
- let pieceStoreInt = Number(pieceStore.innerHTML);
- let priceStoreTotal = pieceStoreInt + priceInt;
- // Set piece value
- pieceStore.innerHTML = priceStoreTotal;
- 
- // Total Item id
- let totalItemAmount = document.getElementById('total_item_amount');
- let totalItemAmountInt = Number(totalItemAmount.innerHTML); // convert integer
- // set item price value
- let amountTotalItem = totalItemAmount.innerHTML = totalItemAmountInt + priceInt;
- 
- // Total Amount and shipping id
- let shipping = document.getElementById('shipping');
- let totalAmount = document.getElementById('total_amount');
- let shippingInt = parseInt(shipping.innerHTML); // convert integer
- let totalAmountInt = parseInt(totalAmount.innerHTML); // convert integer
- // Set shipping charge
- let amountShippingTotal = totalAmount.innerHTML = amountTotalItem + shippingInt;
- 
- // Discount Coupon Condition
- if(amountShippingTotal >= 1000){
- // Coupon Area Block
- let couponArea = document.getElementById("coupon_area");
- couponArea.style.display = "block";
- }
-}
-}
-
-
-
-
-
-
-
-// Decrement function
-function pieceDecrement(decrementPiece, singlePrice, storePiece){
-// decrement price pieceStore id
-let decrement = document.getElementById(decrementPiece);
-let price = document.getElementById(singlePrice);
-let pieceStore = document.getElementById(storePiece);
-
-// condition
-if (decrement.value <= 0){
-  alert("minimum 1 product need");
-  decrement.value = 0;
-}else{
-decrement.value--;
-
- // convert
-  let priceInt = Number(price.innerHTML);
-  let pieceStoreInt = Number(pieceStore.innerHTML);
-  let priceStoreTotal = pieceStoreInt - priceInt;
-  // Set piece minus value
-  pieceStore.innerHTML = priceStoreTotal;
-  
-  // Total Item id
-  let totalItemAmount = document.getElementById('total_item_amount');
-  let totalItemAmountInt = Number(totalItemAmount.innerHTML); // convert integer
-  // set item price value
-  totalItemAmount.innerHTML = totalItemAmountInt - priceInt;
-  
-// Total Amount id
-  let totalAmount = document.getElementById('total_amount');
-  let totalAmountInt = parseInt(totalAmount.innerHTML); // convert integer
-  // Minus Price 
-  let minusTotalAmount = totalAmount.innerHTML = totalAmountInt - priceInt;
-  // Minus shipping with condition
-  if(minusTotalAmount <= 99){
-    totalAmount.innerHTML = 0;
+  // prompt with user area
+  let user = prompt("Pleass Enter Your Name...");
+  if(user){
+  document.getElementById("user").innerHTML = "Hello, " + "' "+user+" ' " + " Welcome Our Website.";
+  }else{
+  let userArea = document.getElementById("userArea");
+  userArea.style.display = 'none';
   }
-  // Discount Coupon Condition
-  if(totalAmount.innerHTML <= 999){
+  
+
+  
+  // Increment function
+  function pieceIncrement(incrementPiece, singlePrice, storePiece){
+  // increment price pieceStore id
+  let increment = document.getElementById(incrementPiece);
+  let price = document.getElementById(singlePrice);
+  let pieceStore = document.getElementById(storePiece);
+  
+  // condition
+  if (increment.value >= 5){
+    alert("maximum 5 product alow");
+    increment.value = 5;
+  }else{
+   increment.value++;
+   // convert
+   let priceInt = Number(price.innerHTML);
+   let pieceStoreInt = Number(pieceStore.innerHTML);
+   let priceStoreTotal = pieceStoreInt + priceInt;
+   // Set piece value
+   pieceStore.innerHTML = priceStoreTotal;
+   
+   // Total Item id
+   let totalItemAmount = document.getElementById('total_item_amount');
+   let totalItemAmountInt = Number(totalItemAmount.innerHTML); // convert integer
+   // set item price value
+   let amountTotalItem = totalItemAmount.innerHTML = totalItemAmountInt + priceInt;
+   
+   // Total Amount and shipping id
+   let shipping = document.getElementById('shipping');
+   let totalAmount = document.getElementById('total_amount');
+   let shippingInt = parseInt(shipping.innerHTML); // convert integer
+   let totalAmountInt = parseInt(totalAmount.innerHTML); // convert integer
+   // Set shipping charge
+   let amountShippingTotal = totalAmount.innerHTML = amountTotalItem + shippingInt;
+   
+   // Discount Coupon Condition
+   if(amountShippingTotal >= 1000){
+   // Coupon Area Block
+   let couponArea = document.getElementById("coupon_area");
+   couponArea.style.display = "block";
+   }
+  }
+  }
+  
+  
+  // Decrement function
+  function pieceDecrement(decrementPiece, singlePrice, storePiece){
+  // decrement price pieceStore id
+  let decrement = document.getElementById(decrementPiece);
+  let price = document.getElementById(singlePrice);
+  let pieceStore = document.getElementById(storePiece);
+  
+  // condition
+  if (decrement.value <= 0){
+    alert("minimum 1 product need");
+    decrement.value = 0;
+  }else{
+  decrement.value--;
+  
+   // convert
+    let priceInt = Number(price.innerHTML);
+    let pieceStoreInt = Number(pieceStore.innerHTML);
+    let priceStoreTotal = pieceStoreInt - priceInt;
+    // Set piece minus value
+    pieceStore.innerHTML = priceStoreTotal;
+    
+    // Total Item id
+    let totalItemAmount = document.getElementById('total_item_amount');
+    let totalItemAmountInt = Number(totalItemAmount.innerHTML); // convert integer
+    // set item price value
+    totalItemAmount.innerHTML = totalItemAmountInt - priceInt;
+    
+  // Total Amount id
+    let totalAmount = document.getElementById('total_amount');
+    let totalAmountInt = parseInt(totalAmount.innerHTML); // convert integer
+    // Minus Price 
+    let minusTotalAmount = totalAmount.innerHTML = totalAmountInt - priceInt;
+    // Minus shipping with condition
+    if(minusTotalAmount <= 99){
+      totalAmount.innerHTML = 0;
+    }
+    // Discount Coupon Condition
+    if(totalAmount.innerHTML <= 999){
+    let couponArea = document.getElementById("coupon_area");
+    couponArea.style.display = "none";
+    }
+  }}
+  
+  
+  
+  // Coupon Area none
   let couponArea = document.getElementById("coupon_area");
   couponArea.style.display = "none";
+  // Coupon Area function
+  function discountCoupon(){
+  // Coupon Apply
+  let totalAmount = document.getElementById('total_amount');
+  let totalAmountInt = parseInt(totalAmount.innerHTML);
+  let couponInput = document.getElementById("couponInput");
+  if(random == couponInput.value){
+  totalAmount.innerHTML = totalAmountInt - 100;
+  alert('Your Discount Success.');
+  couponArea.style.display = "none";
+  let message = document.getElementById("discountMessage");
+  message.innerHTML = "<h4 style='color:green'>Your Discount Success full <br /> and Your Total Amount</h4>";
+  document.getElementById("print").style.display = "block";
+  // Increment Decrement button none
+  document.getElementById('increment1').style.display = "none";
+  document.getElementById('increment2').style.display = "none";
+  document.getElementById('increment3').style.display = "none";
+  document.getElementById('decrement1').style.display = "none";
+  document.getElementById('decrement2').style.display = "none";
+  document.getElementById('decrement3').style.display = "none";
+  }else{
+   alert("Dash not match Coupon code");
   }
-}}
+  }
+  
+  // Window Print function
+  function printWindow(){
+   let confirmBox = confirm('Are You Seure Print, Click to Ok button.');
+   if(confirmBox){
+    window.print();
+   }else{
+   window.alert('Thank You for you Cancel.');
+   }
+  }
+  </script>
 
-
-
-
-
-
-
-// Coupon Area none
-let couponArea = document.getElementById("coupon_area");
-couponArea.style.display = "none";
-// Coupon Area function
-function discountCoupon(){
-// Coupon Apply
-let totalAmount = document.getElementById('total_amount');
-let totalAmountInt = parseInt(totalAmount.innerHTML);
-let couponInput = document.getElementById("couponInput");
-if(random == couponInput.value){
-totalAmount.innerHTML = totalAmountInt - 100;
-alert('Your Discount Success.');
-couponArea.style.display = "none";
-let message = document.getElementById("discountMessage");
-message.innerHTML = "<h4 style='color:green'>Your Discount Success full <br /> and Your Total Amount</h4>";
-document.getElementById("print").style.display = "block";
-// Increment Decrement button none
-document.getElementById('increment1').style.display = "none";
-document.getElementById('increment2').style.display = "none";
-document.getElementById('increment3').style.display = "none";
-document.getElementById('decrement1').style.display = "none";
-document.getElementById('decrement2').style.display = "none";
-document.getElementById('decrement3').style.display = "none";
-}else{
- alert("Dash not match Coupon code");
-}
-}
-
-
-
-
-// Window Print function
-function printWindow(){
- let confirmBox = confirm('Are You Seure Print, Click to Ok button.');
- if(confirmBox){
-  window.print();
- }else{
- window.alert('Thank You for you Cancel.');
- }
-}
-
-</script>
-
-
-
-<div class='clear'><hr /></div> 
-<button><a class="cart" href="card.html">Cart Home</a></button>
+<!--Bottom to top button-->
+<script src="../../js/jquery.js"></script>
+<script src="../../js/bottomToTop.js"></script>
+<!--main menu js-->
+<script src="../../js/mainmenu.js"></script>
 </body>
 </html>
