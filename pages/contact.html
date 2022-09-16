@@ -206,7 +206,7 @@
                         <li><a class="item-underlined" href="../calculators_projact/calculator.html">Calculation</a></li>
                         <li><a class="item-underlined" href="../portfolio/home.html">Portfolio</a></li>
                         <li><a class="item-underlined" href="../pages/contact.html">Contact</a></li>
-                        <!-- <li><a class="item-underlined" href="#">Blog</a></li> -->
+                        <li><a class="item-underlined" href="../blog/blog.html">Blog</a></li>
                       </ul>
                     </nav>
                   </div>
@@ -296,15 +296,14 @@
           <div class="powerd"><a href="https://amqismail.github.io/ams/">Powered by Md Ismail Saheb</a></div>
     </div>
 
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<!--1.  আমরা একটা কন্টাক্ট ফর্ম এর ইউজার এর কন্টাক ইনফর্মেশন ডাটাবেজে স্টোর করতেছি সেটা হল firbase 
+  firebase এর a লিংক ব্যবহার আমাদেরকে আগে করতে হয় -->
 
 <script>
-  // Import the functions you need from the SDKs you need
-          //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
   const firebaseConfig = {
     apiKey: "AIzaSyANiNSscdOpyIO3yvkFmnz1XpI4SOZTAvE",
     authDomain: "contact-577db.firebaseapp.com",
@@ -314,47 +313,91 @@
     messagingSenderId: "197323093489",
     appId: "1:197323093489:web:b3492ab8cbd6f48d410050"
   };
-
+  //2. এই কোড গুলি হল ফায়ারবেজ থেকে জেনারেট করা এই কোডটি কোডগুলো আমাদেরকে inclod করতে হয়
+  // তারপর এই ডাটাবেজ এর সাথে কানেক্ট করলে কাজ করে
   // Initialize Firebase
- firebase.initializeApp(firebaseConfig);
- 
+
  // connection database in firebase
+ //3. ইনিশিয়ালাইজ মেথডে আমরা আমাদের Database connect করে দিলাম
+ firebase.initializeApp(firebaseConfig);
  let contactFormDB = firebase.database().ref("contactForm");
- 
+ // প্রথমে আমরা রেপ মেথড এর মাধ্যমে ফায়ার base ডেটাবেজের নামটা রেপ করলাম 
+ // তারপর ফায়ারবেস ডাটাবেজ এর সাথে কন্টাক্ট করে দিলাম 
+ // তারপর এটা একটা ভেরিয়েবলে নিয়ে নিলাম এভাবে ডেটাবেজটা কানেক্ট করে আমরা এই পেইজে ভেরিয়েবল এ নিয়ে নিলাম
  
  //connection HTML form of Id
  document.getElementById("contactFormHtml").addEventListener("submit", submitForm);
  function submitForm(e){
     e.preventDefault();
-    let name = getElementVal('nameId');
-    let email = getElementVal('emailId');
-    let message = getElementVal('mesId');
-    //save contact information
-    saveMassage(name, email, message);
+//4. আমরা প্রথমে ফরমের একশন যে আইডি ওটা আগে ধরে ফেললাম
+// পর addEventListener অ্যাড করে দিলাম তারপর এখানে পুরো কাজটা যেন ক্লিক করার পরে হয়
+// preventDefault ইউজ করেছি কারণ হলো সাবমিট করার পরেও যেন Data গুলি ফর্মে থেকে যায়.
+
+// connection id attrivute
+  const AllId = (id) => {
+    return document.getElementById(id).value;
+}
+    let name = AllId('nameId');
+    let email = AllId('emailId');
+    let message = AllId('mesId');
+//5. এখানে একটি অ্যানি ny মেশন ফাংশন এর মাধ্যমে আমরা প্রত্যেকটা of form আইডি এট্রিবিউট ধরে ফেলেছিল 
+// এবং আমরা বারবার getElementById হবে না
+//  নিয়ে শর্ট কাট করে ফেলেছি না হলে আমাদেরকে আলাদা আলাদা আইডি বলে ডাক দিয়ে প্রত্যেকটা আইডি 
+// কিন্তু আমরা অবশ্য আইডি ধরে ফেলেছিল  কিন্তু শর্টকাট করে ধরেছি
+// প্রত্যেকটা আইডি ধরে আমরা বেরিয়ে বলে নিয়ে নিয়েছি 
+// নেইম নামে ভেরিয়েবল ইমেইল নামে বেরিয়েবল মেসেজ নামে ভেরিয়েবল তুইআর করেছি 
+// এবং এগুলি set() and push() মেথডে আমরা আবদ্ধ করে ফেলেছি 
+
      //message seccess alert
-    document.querySelector(".alert").style.display = "block";
+     setTimeout(() => {
+        document.querySelector(".alert").style.display = "block";
+    }, 1000);
     //set time out none
     setTimeout(() => {
       document.querySelector(".alert").style.display = "none";
     }, 5000);
 	// form reset
-	 document.getElementById("contactFormHtml").reset();
-    console.log(name, email, message);
- }
-
- //information push in firebase database
- const saveMassage = (name, email, message) => {
+    setTimeout(() => {
+        document.getElementById("contactFormHtml").reset();
+    }, 1000);
+	 
+     //6. এখানে একটাই ফিচার আমরা ক্লিক করার পর একটা ক্লাস কে ধরেছি 
+     // সিলেক্টর দিয়ে ধরে একটা মেসেজ কে ব্লক করে দিয়েছি মানে শো করেছি 
+     // দেন এটা এটা 5 সেকেন্ডের একটা টাইম আউট একটা ফাংশন এর মাধ্যমে ধরে 
+     // আবার আমরা ক্লাস কে ধরে 5 সেকেন্ড পরে আমরা none করে দিয়েছি 
+     // এবং সাথে সাথে রিসেট করে দিয়েছি.
+  
     let newContactForm = contactFormDB.push();
+    // set() মেথড টা আরেক ভাবে ইউজ করা যাবে
+    // newContactForm.set({name : name, email : email,message : message,});
     newContactForm.set({
       name : name,
       email : email,
       message : message,
     });
- };
- // connection id attrivute
- const getElementVal = (id) => {
-  return document.getElementById(id).value;
+ //7. ফাইনালে আমরা contactFormDB push করে দিলাম
+ // নেম ইমেইল মেসেজ প্যারামিটার আকারে ধরে 
+ // আমরা  newContactForm একটা ভেরিয়েবল নিয়ে এটাতে সেট করলাম 
+ // তারপর contactFormDB নামক একটা ভেরিয়েবল push করলাম 
+ // আর এই ভেরিয়েবল firebase ডাটাবেজ এর সাথে কানেক্ট করে দিয়ে ইনিশিয়ালাইজ করে 
+ // firebaseConfig সেট করে দিলাম এভাবেই কাজটা কমপ্লিট হয়ে যায়.
  }
+
+//saveMassage(name, email, message);
+//     const saveMassage = (name, email, message) => {
+//     let newContactForm = contactFormDB.push();
+//     newContactForm.set({
+//       name : name,
+//       email : email,
+//       message : message,
+//     });
+//  };
+// যদি আমরা এই ফাংশন টা addEventListener বাহিরে ইউজ করতে চাই অর্থাৎ ক্লিকের বাহিরে 
+// তাহলে এটা আমরা একটা অ্যানিমেশন ফাংশন এর ভেতর 
+// এনিমেশন ফাংশনের প্যারামিটার আকারে ভেরিয়েবল করতে হবে 
+// তারপর আমাদেরকে contactFormDB এর মাধ্যমে আমরা সেট করে দিতে পারি 
+// আমরা যদি addeventlistener' বাহিরে এভাবে আর ভিতরে ইউজ করলে উপরে দেওয়া আছে আপনার দেখেন.
+// এবং ফাংশন টা addeventlistener ভিতর কল করে দিতে হবে.
  </script>
 
 <!--Bottom to top button-->

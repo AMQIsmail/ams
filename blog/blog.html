@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: antiquewhite;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+        }
+        .blog-container{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 1320px;
+            margin: 30px auto;
+        }
+    </style>
+    <!--scroll top to bottom-->
+    <link rel="stylesheet"  href="../css/bottomToTop.css" type="text/css"/>
+    <!--Underline menu css file-->
+    <link rel="stylesheet"  href="../css/mainmenu.css" type="text/css"/>
+    <!--style css-->
+    <link rel="stylesheet"  href="../css/style.css" type="text/css"/>
+</head>
+<body>
+
+     <!--Responsive menu-->
+  <header class="stick-header">
+    <div class="custom-container">
+      <div class="row">
+        <div class="logo"><a href="#"><img src="../images/logo.png"></a></div>
+          <button type="button" class="nav-toggle">
+            <span></span>
+          </button>
+        <nav>
+          <ul>
+            <li><a class="item-underlined" href="../index.html">Home</a></li>
+            <li><a class="item-underlined" href="../Cards/card_projact_1/card9.html">Restaurant</a></li>
+            <li><a class="item-underlined" href="../calculators_projact/calculator.html">Calculation</a></li>
+            <li><a class="item-underlined" href="../portfolio/home.html">Portfolio</a></li>
+            <li><a class="item-underlined" href="../pages/contact.html">Contact</a></li>
+            <li><a class="item-underlined" href="blog.html">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--Bottom to top Arrow button (its requrde bottomToTop.js jquery.js bottomToTop.css bottomToTop.png)-->
+ <div class="bottom_to_top">
+    <a href="#" class="click-to-top"><img alt="Bottom-to-Top" src="../images/bottomToTop.png"/></a>
+</div>
+
+
+
+    <div class="blog-container">
+        <!-- One Blog -->
+        <div>
+        
+         </div>
+
+        <!-- Two -->
+         <div>
+             
+         </div> 
+
+    </div>
+    
+
+<!--==================  foter section  =====================-->
+<div class="foter">
+    <div class="custom-container foter-parent">
+        <div class="foter-left">
+            <!--Calvulators-->
+            <a href="../calculators_projact/calculator.html" target="_blank">Calculators</a>
+            <br />
+            <!--Carts-->
+            <a href="../Cards/card_projact_1/card9.html" target="_blank">Cart</a>
+            <br />
+            <!--Confirm-->
+            <a href="../confirms_projact/confirm.html">Confirm</a>
+            <br />
+            <!--Menu-->
+            <a href="../menu/underlinedMenu/boxMenu/boxMenu.html">Menu</a>
+            <br />
+        </div>
+
+        <div class="foter-midel">
+            <!--Blog-->
+            <a href="../blog/blog.html">Blog</a>
+            <br />
+            <!--Grid-->
+            <a href="../grid/grid.html">Grid</a>
+            <br />
+            <!--Flex Box-->
+            <a href="../cssFlexBox/cssFlexBox.html">Flex Box</a><a style="font-size: 30px; color:red" href="../plagins/section-one/index.html">.</a>
+            <br />
+            <!--Grid-->
+            <a href="../portfolio/portfolio-two/index.html">port</a>
+            <br />
+        </div>
+
+        <div class="foter-right">
+             <img src="../images/ismailD.jpg">
+        </div>
+      </div>
+      <div class="powerd"><a href="https://amqismail.github.io/ams/">Powered by Md Ismail Saheb</a></div>
+</div>
+
+    <!--Bottom to top button-->
+<script src="../js/jquery.js"></script>
+<script src="../js/bottomToTop.js"></script>
+<!--main menu js-->
+<script src="../js/mainmenu.js"></script>
+</body>
+</html>
