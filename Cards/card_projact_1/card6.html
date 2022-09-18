@@ -35,8 +35,11 @@ font-size:20px;
 
 <div style="background: #FF00FF; padding:20px; border-radius:10px">
 <h3>Total Item Amount: <span style="background:black; color:#fff; padding:5px; border-radius:5px" id='total_item_amount'>0</span> Tk.</h3>
+<!-- এখানে আমরা টোটাল অ্যামাউন্ট এর সাথে শিপিং চার্জ ও যোগ করে দিয়েছে সেটার আইডি এখানে -->
   <hr /><h3>Shipping Charge: <span id='shipping'> 50</span> Tk. <hr /></h3>
-  <h3 style="background:black; color: #fff; padding:20px;border-radius:10px">Total Amount = <span style="background:#fff; color:black; padding:5px; border-radius:5px" id="total_amount">0</span> Tk.</h3><hr />
+  <h3 style="background:black; color: #fff; padding:20px;border-radius:10px">Total Amount = 
+    <span style="background:#fff; color:black; padding:5px; border-radius:5px" id="total_amount">0</span> Tk.</h3>
+    <hr />
 </div>
 
 
@@ -112,6 +115,7 @@ if (increment.value >= 5){
  // set item price value
  let amountTotalItem = totalItemAmount.innerHTML = totalItemAmountInt + priceInt;
  
+ // এই জায়গাটায় আমরা টোটাল আইটেম অ্যামাউন্ট এর সাথে শিপিং চার্জটা যোগ করে টোটাল অ্যামাউন্ট বসিয়ে দিচ্ছি
  // Total Amount and shipping id
  let shipping = document.getElementById('shipping');
  let totalAmount = document.getElementById('total_amount');
@@ -154,11 +158,13 @@ decrement.value--;
   // set item price value
   totalItemAmount.innerHTML = totalItemAmountInt - priceInt;
   
+  // এখানে আমরা টোটাল অ্যামাউন্ট থেকে একেকটা আইটেমে প্রাইস minus করে দিচ্ছি
 // Total Amount id
   let totalAmount = document.getElementById('total_amount');
   let totalAmountInt = parseInt(totalAmount.innerHTML); // convert integer
   // Minus Price 
   let minusTotalAmount = totalAmount.innerHTML = totalAmountInt - priceInt;
+  // সর্বশেষে 100 টাকার নিচে যখন চলে আসবে তখন শিপিং চার্জটা ও minus হয়ে 0 যাবে.
   // Minus shipping with condition
   if(minusTotalAmount <= 99){
     totalAmount.innerHTML = 0;

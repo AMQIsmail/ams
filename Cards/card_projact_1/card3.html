@@ -14,9 +14,10 @@
 <div style="background: red; padding:30px; border-radius:10px">
 <h1>BARGER</h1>
 <h2>Barger Price: <span id="barger_price">200</span></h2>
-<h3>Barger Totel Price: <span id="barger_store">00</span></h3>
+<h3>Barger Totel Item Price: <span id="barger_store">00</span></h3>
 <label>Item: </label>
 <input type='button' value="0" id="barger_inc_dec"><br><br>
+<!-- একাধিক আইডি ধরার জন্য প্যারামিটার আকারে পাস করতে হয় -->
 <button onclick="restorendIncrement('barger_inc_dec', 'barger_price', 'barger_store')">+</button>
 <button onclick="restorendDecrement('barger_inc_dec', 'barger_price', 'barger_store')">-</button>
 </div>
@@ -26,9 +27,10 @@
 <div style="background: green; padding:30px; border-radius:10px">
 <h1>PIZE</h1>
 <h2>Piza Price: <span id="pize_price">300</span></h2>
-<h2>Pize Totel Price: <span id="pize_store">00</span></h2>
+<h2>Pize Totel Item Price: <span id="pize_store">00</span></h2>
 <label>Item: </label>
 <input type='button' value="0" id="pize_inc_dec"><br><br>
+<!-- একাধিক আইডি ধরার জন্য প্যারামিটার আকারে পাস করতে হয় -->
 <button onclick="restorendIncrement('pize_inc_dec', 'pize_price', 'pize_store')">+</button>
 <button onclick="restorendDecrement('pize_inc_dec', 'pize_price', 'pize_store')">-</button>
 </div>
@@ -36,6 +38,9 @@
 
 
 <script>
+  // Increment
+  // একাধিক আইডি ধরার জন্য প্যারামিটার আকারে পাস করতে হয়
+  // এক ফাংশন এর মাধ্যমে একাধিক আইটেমের বেলু চেঞ্জ হবে যার কারণে আমরা প্যারামিটার আকারে আইডি খুলে ধরেছি
 function restorendIncrement(incrementItem, singlePrice, storePrice){
 let increment = document.getElementById(incrementItem);
 let price = document.getElementById(singlePrice);
@@ -54,7 +59,9 @@ if (increment.value >= 5){
 }
 
 
-
+  // Decrement
+  // একাধিক আইডি ধরার জন্য প্যারামিটার আকারে পাস করতে হয়
+  // এক ফাংশন এর মাধ্যমে একাধিক আইটেমের বেলু চেঞ্জ হবে যার কারণে আমরা প্যারামিটার আকারে আইডি খুলে ধরেছি
 function restorendDecrement(decrementItem, singlePrice, storePrice){
 let decrement = document.getElementById(decrementItem);
 let price = document.getElementById(singlePrice);

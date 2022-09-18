@@ -14,6 +14,7 @@
 <h3>Gereel Totel Price: <span id="gereel_store">00</span></h3>
 <label>Item: </label>
 <input type='button' value="0" id="gereel_inc_dec"><br><br>
+<!-- একাধিক আইডি ধরার জন্য প্যারামিটার আকারে পাস করতে হয় -->
 <button onclick="restorendIncrement('gereel_inc_dec', 'gereel_price', 'gereel_store')">+</button>
 <button onclick="restorendDecrement('gereel_inc_dec', 'gereel_price', 'gereel_store')">-</button>
 </div>
@@ -27,6 +28,7 @@
 <h3>Barger Totel Price: <span id="barger_store">00</span></h3>
 <label>Item: </label>
 <input type='button' value="0" id="barger_inc_dec"><br><br>
+<!-- একাধিক আইডি ধরার জন্য প্যারামিটার আকারে পাস করতে হয় -->
 <button onclick="restorendIncrement('barger_inc_dec', 'barger_price', 'barger_store')">+</button>
 <button onclick="restorendDecrement('barger_inc_dec', 'barger_price', 'barger_store')">-</button>
 </div>
@@ -39,12 +41,15 @@
 <h2>Pize Totel Price: <span id="pize_store">00</span></h2>
 <label>Item: </label>
 <input type='button' value="0" id="pize_inc_dec"><br><br>
+<!-- একাধিক আইডি ধরার জন্য প্যারামিটার আকারে পাস করতে হয় -->
 <button onclick="restorendIncrement('pize_inc_dec', 'pize_price', 'pize_store')">+</button>
 <button onclick="restorendDecrement('pize_inc_dec', 'pize_price', 'pize_store')">-</button>
 </div>
 
 
-
+  // Increment
+  // একাধিক আইডি ধরার জন্য প্যারামিটার আকারে পাস করতে হয়
+  // এক ফাংশন এর মাধ্যমে একাধিক আইটেমের বেলু চেঞ্জ হবে যার কারণে আমরা প্যারামিটার আকারে আইডি খুলে ধরেছি
 <script>
 function restorendIncrement(incrementItem, singlePrice, storePrice){
 let increment = document.getElementById(incrementItem);
@@ -56,6 +61,7 @@ if (increment.value >= 5){
   increment.value = 5;
 }else{
  increment.value++;
+ // বাই ডিফল্ট নাম্বার স্ট্রিং থাকে একে কনভার্ট করে ইন্তেজার করতে হয় আর এই ফাংশন দিয়েই ইন্তেজার হয়.
  let priceInt = Number(price.innerHTML);
  let itemInt = Number(item.innerHTML);
  let priceItemTotel = itemInt + priceInt;
@@ -64,7 +70,9 @@ if (increment.value >= 5){
 }
 
 
-
+  // Decrement
+  // একাধিক আইডি ধরার জন্য প্যারামিটার আকারে পাস করতে হয়
+  // এক ফাংশন এর মাধ্যমে একাধিক আইটেমের বেলু চেঞ্জ হবে যার কারণে আমরা প্যারামিটার আকারে আইডি খুলে ধরেছি
 function restorendDecrement(decrementItem, singlePrice, storePrice){
 let decrement = document.getElementById(decrementItem);
 let price = document.getElementById(singlePrice);
@@ -75,6 +83,7 @@ if (decrement.value <= 0){
   decrement.value = 0;
 }else{
 decrement.value--;
+// বাই ডিফল্ট নাম্বার স্ট্রিং থাকে একে কনভার্ট করে ইন্তেজার করতে হয় আর এই ফাংশন দিয়েই ইন্তেজার হয়
   let priceInt = Number(price.innerHTML);
   let itemInt = Number(item.innerHTML);
   let priceItemTotel = itemInt - priceInt;

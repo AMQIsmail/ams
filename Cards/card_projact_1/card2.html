@@ -4,11 +4,12 @@
 <title>card 2</title>
 </head>
 <body>
+
 <h1 style="color:#000; text-align:center">card projact 2 <br> with singel product</h1>
 <div style="background: green; padding:30px; border-radius:10px">
 <h1>PIZE</h1>
 <h2>Piza Price: <span id="price">300</span></h2>
-<h2>Pize Totel Item: <span id="item">00</span></h2>
+<h2>Pize Totel Item: <span id="itemAmount">00</span></h2>
 <label>Item: </label>
 <input type='button' value="0" id="inc_dec"><br><br>
 <button onclick="restorendIncrement()">+</button>
@@ -17,10 +18,12 @@
 
 
 <script>
+  // Increment
 function restorendIncrement(){
+  // প্রথমে আমরা সবগুলি আইডিকে ধরে ফেলেছি
 let increment = document.getElementById("inc_dec");
 let price = document.getElementById("price");
-let item = document.getElementById("item");
+let item = document.getElementById("itemAmount");
 
 if (increment.value >= 5){
   alert("maximum 5 product alow");
@@ -35,11 +38,11 @@ if (increment.value >= 5){
 }
 
 
-
+ // Decrement
 function restorendDecrement(){
 let decrement = document.getElementById("inc_dec");
 let price = document.getElementById("price");
-let item = document.getElementById("item");
+let item = document.getElementById("itemAmount");
 
 if (decrement.value <= 0){
   alert("minimum 1 product need");

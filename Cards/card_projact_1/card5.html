@@ -51,11 +51,12 @@
 
 
 <script>
+  // সমস্ত কাজ গুলি একেক টা ক্লিক করার পরে হইতেছে
 // Increment function
-function pieceIncrement(incrementPiece, singlePrice, storePiece){
-// increment price pieceStore id
+function pieceIncrement(incrementPiece, singleprice, storePiece){
+// এখানে একটা বিষয় মনে রাখতে হবে প্যারামিটার থেকে যে নামটা নেয়া হয় সেই নামে ভেরিয়েবল create করা যাবে না
 let increment = document.getElementById(incrementPiece);
-let price = document.getElementById(singlePrice);
+let singlePrice = document.getElementById(singleprice);
 let pieceStore = document.getElementById(storePiece);
 
 // condition
@@ -65,29 +66,30 @@ if (increment.value >= 5){
 }else{
  increment.value++;
  // convert
- let priceInt = Number(price.innerHTML);
+ let singlePriceInt = Number(singlePrice.innerHTML);
  let pieceStoreInt = Number(pieceStore.innerHTML);
- let priceStoreTotal = pieceStoreInt + priceInt;
+ let priceStoreTotal = pieceStoreInt + singlePriceInt;
  // Set piece value
  pieceStore.innerHTML = priceStoreTotal;
  
  // Total Item id
  let totalItemAmount = document.getElementById('total_item_amount');
  let totalItemAmountInt = Number(totalItemAmount.innerHTML); // convert integer
+ // এখানে আমরা একেকটা ক্লিকের মাধ্যমে সিঙ্গেল প্রাইস টা টোটাল এমাউন্ট এ যোগ করে দিচ্ছি
  // set item price value
- totalItemAmount.innerHTML = totalItemAmountInt + priceInt;
+ totalItemAmount.innerHTML = totalItemAmountInt + singlePriceInt;
 }
 }
 
 
 
 
-
+// সমস্ত কাজ গুলি একেক টা ক্লিক করার পরে হইতেছে
 // Decrement function
-function pieceDecrement(decrementPiece, singlePrice, storePiece){
-// decrement price pieceStore id
+function pieceDecrement(decrementPiece, singleprice, storePiece){
+// এখানে একটা বিষয় মনে রাখতে হবে প্যারামিটার থেকে যে নামটা নেয়া হয় সেই নামে ভেরিয়েবল create করা যাবে না
 let decrement = document.getElementById(decrementPiece);
-let price = document.getElementById(singlePrice);
+let singlePrice = document.getElementById(singleprice);
 let pieceStore = document.getElementById(storePiece);
 
 // condition
@@ -98,17 +100,18 @@ if (decrement.value <= 0){
 decrement.value--;
 
  // convert
-  let priceInt = Number(price.innerHTML);
+  let singlePriceInt = Number(singlePrice.innerHTML);
   let pieceStoreInt = Number(pieceStore.innerHTML);
-  let priceStoreTotal = pieceStoreInt - priceInt;
+  let priceStoreTotal = pieceStoreInt - singlePriceInt;
   // Set piece minus value
   pieceStore.innerHTML = priceStoreTotal;
   
   // Total Item id
   let totalItemAmount = document.getElementById('total_item_amount');
   let totalItemAmountInt = Number(totalItemAmount.innerHTML); // convert integer
+  // এখানে আমরা প্রত্যেকটা আইটেমের বেলুন টোটাল এমাউন্ট miness করে নিচ্ছি একটা ক্লিক এর পরে.
   // set item price value
-  totalItemAmount.innerHTML = totalItemAmountInt - priceInt;
+  totalItemAmount.innerHTML = totalItemAmountInt - singlePriceInt;
 }}
 </script>
 
