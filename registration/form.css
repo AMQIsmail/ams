@@ -67,14 +67,14 @@ body{
         margin: 100px auto;
         border: 2px solid rgb(255, 255, 255);
         border-radius: 40px;
-        width: 300px;
+        width: 280px;
         height: 350px;
         text-align: center;
         color: rgb(255, 255, 255);
     }
     .text-fiel{
         padding: 10px 10px;
-        width: 250px;
+        width: 200px;
         margin: 20px 0;
         font-size: 15px;
     }
