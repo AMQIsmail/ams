@@ -34,7 +34,7 @@ header nav ul li a{
     text-transform: uppercase;
 }
 header nav ul li a:hover{
-    color: rgb(78, 175, 56);
+    color: rgb(102, 219, 94);
 }
 /*==================nav toggle button=======================*/
 .nav-toggle{
