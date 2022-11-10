@@ -1,17 +1,15 @@
 
 const firebaseApp = firebase.initializeApp({
-  apiKey: "AIzaSyBHheHBfAf-vbN59zcLUzz-daWcjhRDebg",
-  authDomain: "registerlogin-b7b7e.firebaseapp.com",
-  databaseURL: "https://registerlogin-b7b7e-default-rtdb.firebaseio.com",
-  projectId: "registerlogin-b7b7e",
-  storageBucket: "registerlogin-b7b7e.appspot.com",
-  messagingSenderId: "469521728124",
-  appId: "1:469521728124:web:349df3d2659ee317917ff9"
+    apiKey: "AIzaSyBbUOlhS2h1eOsuIqtORIKdJicbwuaoU0Y",
+    authDomain: "facebookidfillter.firebaseapp.com",
+    databaseURL: "https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js",
+    projectId: "facebookidfillter",
+    storageBucket: "facebookidfillter.appspot.com",
+    messagingSenderId: "265365318801",
+    appId: "1:265365318801:web:c5dbbcc7ffb1717db86330"
 });
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
-
-
 
 // Sign up function
 const signUp = () => {
@@ -26,11 +24,11 @@ const signUp = () => {
     //message seccess alert
     setTimeout(() => {
     document.getElementById("Smessage").style.display = "block";
-    }, 1000);
+    }, 500);
     //message set time out none
     setTimeout(() => {
     document.getElementById("Smessage").style.display = "none";
-    }, 4000);
+    }, 8000);
     })
  
     .catch((error) => {
@@ -48,7 +46,7 @@ const signIn = () => {
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((result) => {
             // Signed in 
-            document.getElementById("message").innerHTML = 'Your Log In Seccess Full.';
+            document.getElementById("message").innerHTML = 'Your ID and Your Group Same.';
             console.log(result)
             //message seccess alert
     setTimeout(() => {

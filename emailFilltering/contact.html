@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!--scroll top to bottom-->
+    <link rel="stylesheet"  href="../css/bottomToTop.css" type="text/css"/>
+    <!--Underline menu css file-->
+    <link rel="stylesheet"  href="../css/mainmenu.css" type="text/css"/>
+    <!--style css-->
+    <link rel="stylesheet"  href="../css/style.css" type="text/css"/>
+    <title>Contact page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;  
+        }
+        /*=============== contact container area =====================*/
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        /*=============== contact form Input righte area =====================*/
+        #contactFormHtml{
+           width: 40%;
+           padding: 40px;
+           background-color: rgba(8, 8, 8, 0.5) !important;
+           border-radius: 10px;
+        }
+        #contactFormHtml h2{
+            font-size: 30px;
+            color: rgb(0, 119, 26);
+            font-weight: 500;
+        }
+        .inputBox{
+            position: relative;
+            width:100%;
+            margin-top: 10px;
+        }
+        .inputBox textarea,
+        .inputBox input{
+            width: 100%;
+            padding: 5px 0;
+            font-size: 17px;
+            margin: 10px 0;
+            border: none;
+            outline: none;
+            background-color: rgba(21, 18, 63, 0.5) !important;
+            padding: 10px;
+            resize: none;
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+        }
+        .inputBox span{
+            position: absolute;
+            left: 0;
+            padding: 5px 5px;
+            font-size: 17px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 0.5s;
+            color: rgb(255, 255, 255);
+        }
+        .inputBox input:focus ~ span,
+        .inputBox input:valid ~ span,
+        .inputBox textarea:focus ~ span,
+        .inputBox textarea:valid ~ span{
+            color: green;
+            font-size: 14px;
+            transform: translateY(-20px);
+        }
+        .inputBox input[type="submit"]{
+            width: 150px;
+            background-color: rgb(77, 163, 77);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding:10px;
+            font-size: 18px;
+        }
+        .alert{
+            background-color: rgb(126, 189, 126);
+            padding: 7px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            color: green;
+            text-align: center;
+            display: none;
+        }
+        /*=============== contact form Responsive area =====================*/
+        @media (max-width:991px){
+            .contact{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                background: url(../images/back.jpg);
+                background-size: cover;
+            }
+            .container{
+                flex-direction: column;
+                width: 100%;
+                margin: auto;
+                justify-content: center;
+            }
+            .container .contactInfo{
+                width: 90%;
+                margin-left: 10px;
+               padding-right: -5px;
+            }
+            #contactFormHtml{
+                width: 90%;
+                margin:5px auto;
+                padding: 10px;
+            }
+            .container .contactInfo .box .text p{
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            font-size: 15px;
+        }
+        }
+    </style>
+</head>
+<body>
+     <!--Bottom to top Arrow button (its requrde bottomToTop.js jquery.js bottomToTop.css bottomToTop.png)-->
+     <div class="bottom_to_top">
+        <a href="#" class="click-to-top"><img alt="Bottom-to-Top" src="../images/bottomToTop.png"/></a>
+    </div>
+         <!--Responsive menu-->
+            <header class="stick-header">
+                <div class="custom-container">
+                  <div class="row">
+                    <div class="logo"><a href="../index.html"><img src="../images/logo.png"></a></div>
+                      <button type="button" class="nav-toggle">
+                        <span></span>
+                      </button>
+                    <nav>
+                      <ul>
+                        <li><a class="item-underlined" href="../index.html">Home</a></li>
+                        <li><a class="item-underlined" href="../Cards/card_projact_1/card9.html">Restaurant</a></li>
+                        <li><a class="item-underlined" href="../calculators_projact/calculator.html">Calculation</a></li>
+                        <li><a class="item-underlined" href="../portfolio/home.html">Portfolio</a></li>
+                        <li><a class="item-underlined" href="../pages/contact.html">Contact</a></li>
+                        <li><a class="item-underlined" href="../blog/blog.html">Blog</a></li>
+						<li><a style="color: black; background:#fff; padding:8px 10px; border-radius: 4px;" href="../registration/registration.html">Sing Up Now</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </header>
+        <!-- ================ contact form =======================-->
+      <section class="contact">    
+            <div class="container">
+                <form id="contactFormHtml" action="">
+                    <div class="alert">Your Message Send Seccess.</div>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" id="nameId" required="required">
+                        <span>Enter Your Facebook Link ID...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" id="emailId" required="required">
+                        <span>Enter Your Facebook Group Name...</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea type="text" id="mesId"></textarea>
+                        <span>Write Your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                       <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+        </section> 
+        <!--==================  foter design  =====================-->
+    <div class="foter">
+        <div class="custom-container foter-parent">
+            <div class="foter-left">
+                <!--Calvulators-->
+                <a href="../calculators_projact/calculator.html" target="_blank">Calculators</a>
+                <br />
+                <!--Carts-->
+                <a href="../Cards/card_projact_1/card9.html" target="_blank">Cart</a>
+                <br />
+                <!--bank AMQ-->
+              <a href="../bankTemplate/bank.html" target="_blank">Bank</a>
+              <br />
+                <!--Confirm-->
+                <a href="../confirms_projact/confirm.html">Confirm</a>
+                <br />
+                <!--Menu-->
+                <a href="../menu/underlinedMenu/boxMenu/boxMenu.html">Menu</a>
+                <br />
+                <!--Grid-->
+                <a href="../grid/grid.html">Grid</a>
+                <br />
+                <!--Flex Box-->
+                <a href="../cssFlexBox/cssFlexBox.html">Flex Box</a>
+                <a style="font-size: 30px; color:red" href="../plagins/section-one/index.html">.</a>
+                <a style="font-size: 30px; color:rgb(14, 138, 0)" href="../in/information.html">.</a>
+            </div>
+            <div class="foter-right">
+                 <img src="../images/ismailD.jpg">
+            </div>
+          </div>
+          <div class="powerd"><a href="https://amqismail.github.io/ams/">Powered by Md Ismail Saheb</a></div>
+    </div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<!--1.  আমরা একটা কন্টাক্ট ফর্ম এর ইউজার এর কন্টাক ইনফর্মেশন ডাটাবেজে স্টোর করতেছি সেটা হল firbase 
+  firebase এর a লিংক ব্যবহার আমাদেরকে আগে করতে হয় -->
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyANiNSscdOpyIO3yvkFmnz1XpI4SOZTAvE",
+    authDomain: "contact-577db.firebaseapp.com",
+    databaseURL: "https://contact-577db-default-rtdb.firebaseio.com",
+    projectId: "contact-577db",
+    storageBucket: "contact-577db.appspot.com",
+    messagingSenderId: "197323093489",
+    appId: "1:197323093489:web:b3492ab8cbd6f48d410050"
+  };
+  //2. এই কোড গুলি হল ফায়ারবেজ থেকে জেনারেট করা এই কোডটি কোডগুলো আমাদেরকে inclod করতে হয়
+  // তারপর এই ডাটাবেজ এর সাথে কানেক্ট করলে কাজ করে
+  // Initialize Firebase
+
+ // connection database in firebase
+ //3. ইনিশিয়ালাইজ মেথডে আমরা আমাদের Database connect করে দিলাম
+ firebase.initializeApp(firebaseConfig);
+ let contactFormDB = firebase.database().ref("contactForm");
+ // প্রথমে আমরা রেপ মেথড এর মাধ্যমে ফায়ার base ডেটাবেজের নামটা রেপ করলাম 
+ // তারপর ফায়ারবেস ডাটাবেজ এর সাথে কন্টাক্ট করে দিলাম 
+ // তারপর এটা একটা ভেরিয়েবলে নিয়ে নিলাম এভাবে ডেটাবেজটা কানেক্ট করে আমরা এই পেইজে ভেরিয়েবল এ নিয়ে নিলাম
+ 
+ //connection HTML form of Id
+ document.getElementById("contactFormHtml").addEventListener("submit", submitForm);
+ function submitForm(e){
+    e.preventDefault();
+//4. আমরা প্রথমে ফরমের একশন যে আইডি ওটা আগে ধরে ফেললাম
+// পর addEventListener অ্যাড করে দিলাম তারপর এখানে পুরো কাজটা যেন ক্লিক করার পরে হয়
+// preventDefault ইউজ করেছি কারণ হলো সাবমিট করার পরেও যেন Data গুলি ফর্মে থেকে যায়.
+
+// connection id attrivute
+  const AllId = (id) => {
+    return document.getElementById(id).value;
+}
+    let name = AllId('nameId');
+    let email = AllId('emailId');
+    let message = AllId('mesId');
+//5. এখানে একটি অ্যানি ny মেশন ফাংশন এর মাধ্যমে আমরা প্রত্যেকটা of form আইডি এট্রিবিউট ধরে ফেলেছিল 
+// এবং আমরা বারবার getElementById হবে না
+//  নিয়ে শর্ট কাট করে ফেলেছি না হলে আমাদেরকে আলাদা আলাদা আইডি বলে ডাক দিয়ে প্রত্যেকটা আইডি 
+// কিন্তু আমরা অবশ্য আইডি ধরে ফেলেছিল  কিন্তু শর্টকাট করে ধরেছি
+// প্রত্যেকটা আইডি ধরে আমরা বেরিয়ে বলে নিয়ে নিয়েছি 
+// নেইম নামে ভেরিয়েবল ইমেইল নামে বেরিয়েবল মেসেজ নামে ভেরিয়েবল তুইআর করেছি 
+// এবং এগুলি set() and push() মেথডে আমরা আবদ্ধ করে ফেলেছি 
+
+     //message seccess alert
+     setTimeout(() => {
+        document.querySelector(".alert").style.display = "block";
+    }, 1000);
+    //message set time out none
+    setTimeout(() => {
+      document.querySelector(".alert").style.display = "none";
+    }, 5000);
+	// form reset
+    setTimeout(() => {
+        document.getElementById("contactFormHtml").reset();
+    }, 1000);
+	 
+     //6. এখানে একটাই ফিচার আমরা ক্লিক করার পর একটা ক্লাস কে ধরেছি 
+     // সিলেক্টর দিয়ে ধরে একটা মেসেজ কে ব্লক করে দিয়েছি মানে শো করেছি 
+     // দেন এটা এটা 5 সেকেন্ডের একটা টাইম আউট একটা ফাংশন এর মাধ্যমে ধরে 
+     // আবার আমরা ক্লাস কে ধরে 5 সেকেন্ড পরে আমরা none করে দিয়েছি 
+     // এবং সাথে সাথে রিসেট করে দিয়েছি.
+  
+    let newContactForm = contactFormDB.push();
+    // set() মেথড টা আরেক ভাবে ইউজ করা যাবে
+    // newContactForm.set({name : name, email : email,message : message,});
+    newContactForm.set({
+      name : name,
+      email : email,
+      message : message,
+    });
+ //7. ফাইনালে আমরা contactFormDB push করে দিলাম
+ // নেম ইমেইল মেসেজ প্যারামিটার আকারে ধরে 
+ // আমরা  newContactForm একটা ভেরিয়েবল নিয়ে এটাতে সেট করলাম 
+ // তারপর contactFormDB নামক একটা ভেরিয়েবল push করলাম 
+ // আর এই ভেরিয়েবল firebase ডাটাবেজ এর সাথে কানেক্ট করে দিয়ে ইনিশিয়ালাইজ করে 
+ // firebaseConfig সেট করে দিলাম এভাবেই কাজটা কমপ্লিট হয়ে যায়.
+ }
+
+//saveMassage(name, email, message);
+//     const saveMassage = (name, email, message) => {
+//     let newContactForm = contactFormDB.push();
+//     newContactForm.set({
+//       name : name,
+//       email : email,
+//       message : message,
+//     });
+//  };
+// যদি আমরা এই ফাংশন টা addEventListener বাহিরে ইউজ করতে চাই অর্থাৎ ক্লিকের বাহিরে 
+// তাহলে এটা আমরা একটা অ্যানিমেশন ফাংশন এর ভেতর 
+// এনিমেশন ফাংশনের প্যারামিটার আকারে ভেরিয়েবল করতে হবে 
+// তারপর আমাদেরকে contactFormDB এর মাধ্যমে আমরা সেট করে দিতে পারি 
+// আমরা যদি addeventlistener' বাহিরে এভাবে আর ভিতরে ইউজ করলে উপরে দেওয়া আছে আপনার দেখেন.
+// এবং ফাংশন টা addeventlistener ভিতর কল করে দিতে হবে.
+ </script>
+
+<!--Bottom to top button-->
+<script src="../js/jquery.js"></script>
+<script src="../js/bottomToTop.js"></script>
+<!--main menu js-->
+<script src="../js/mainmenu.js"></script>
+</body>
+</html>
