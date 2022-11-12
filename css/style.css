@@ -4,12 +4,12 @@
 }
 body{
     box-sizing: border-box;
-    background-color: rgb(237, 237, 237);
+    background-color: #F3F2EF;
     width: 100%;
   }
   /*==================  cooman css ====================*/
   .custom-container{
-    max-width: 1170px;
+    max-width: 1120px;
     margin: auto;
   }
   .custom-row{
@@ -47,11 +47,11 @@ body{
   text-align: center;
   margin: 5px;
   padding: 40px 20px;
-  background-color: bisque;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
 }
 .company-blog .blog:hover{
-  background-color: rgb(254, 234, 208);
+  background-color: rgb(255, 255, 255);
 }
 .company-blog .blog img{
   width: 100px;
@@ -65,11 +65,11 @@ body{
 /*company section Responsive design*/
 @media only screen and (min-width:0px) and (max-width: 576px){
   .company-blog .blog{
-    background-color: rgb(200, 0, 194);
+    background-color: rgb(255, 255, 255);
     flex: 100%;
   }
   .company-blog .blog:hover{
-    background-color: rgb(205, 78, 225);
+    background-color: rgb(244, 243, 243);
   }
   .company-blog .blog h2:hover,
   .company-blog .blog p:hover{
@@ -79,7 +79,7 @@ body{
 
 /*==================  foter ====================*/
 .foter{
-  background: rgb(21, 17, 41);
+  background: #F3F2EF;
   width: 100%;
 }
 .foter-parent{
@@ -92,13 +92,13 @@ body{
   line-height: 25px;
 }
 .foter-left a{
-  color: rgb(217, 216, 216);
+  color: rgb(19, 19, 19);
   font-size: 15px;
   text-transform: uppercase;
   text-decoration: none;
 }
 .foter-left a:hover{
-  color: rgb(76, 128, 76);
+  color: rgb(43, 43, 43);
   font-size: 16px;
 }
 .foter-midel{
@@ -108,13 +108,13 @@ body{
   line-height: 25px;
 }
 .foter-midel a{
-  color: rgb(217, 216, 216);
+  color: rgb(0, 0, 0);
   font-size: 15px;
   text-transform: uppercase;
   text-decoration: none;
 }
 .foter-midel a:hover{
-  color: rgb(76, 128, 76);
+  color: rgb(50, 50, 50);
   font-size: 16px;
 }
 .foter-right img{
@@ -133,7 +133,7 @@ body{
    color: rgb(49, 89, 58);
 }
 .powerd a:hover{
-  color: rgb(105, 138, 113);
+  color: rgb(43, 43, 43);
 }
 @media only screen and (min-width:577px) and (max-width: 992px){
   .foter{
