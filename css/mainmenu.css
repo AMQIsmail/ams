@@ -58,8 +58,8 @@ header nav ul li a:hover{
 /*==================nav toggle button=======================*/
 .nav-toggle{
     background-color: #666666;
-    height: 35px;
-    width: 45px;
+    height: 32px;
+    width: 40px;
     cursor:pointer;
     display: none;
     margin-right: 10px;
@@ -131,13 +131,13 @@ header nav ul li a:hover{
         height: 35px;
     }
     /* search ber style */
-.search{
+    .search{
+        width: 120px;
+        margin-left: 0;
+    }
+    .search input{
     width: 120px;
-    margin-left: 0;
-}
-.search input{
-  width: 120px;
-}
+    }
 }
 /*========================item under line create========================*/
 /* =====ITEM UNDERLINED=====*/
