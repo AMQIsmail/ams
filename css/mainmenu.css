@@ -14,7 +14,7 @@ header nav{
     margin-right: 0px;
 }
 header{
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     height: 52px;
 }
 /* search ber style */
@@ -46,14 +46,20 @@ header nav ul li{
 header nav ul li a{
     text-decoration: none;
     color: black;
-    padding: 0 1rem;
+    padding: 10px 1rem;
     font-size: 15px;
     transition: all 0.5s ease;
     display: inline-flex;
     text-transform: uppercase;
 }
 header nav ul li a:hover{
-    color: rgb(102, 219, 94);
+    color: rgb(167, 199, 164);
+}
+.re-bt{
+    color: black;
+    background: rgb(226, 226, 226);
+    padding: 8px 10px;
+    border-radius: 4px;
 }
 /*==================nav toggle button=======================*/
 .nav-toggle{
@@ -102,7 +108,7 @@ header nav ul li a:hover{
         display: block;
     }
     header{
-        background-color:#FFFFFF;
+        background-color:#ffffff;
         border-radius: 2px;
         width: 100%;
     }
@@ -113,6 +119,8 @@ header nav ul li a:hover{
         overflow: hidden;
         visibility: hidden;
         transition: all 0.5s ease;
+        background-color: #ffffff;
+        z-index: 1;
     }
     header nav.open{
         visibility: visible;
@@ -120,7 +128,7 @@ header nav ul li a:hover{
     header nav ul {
         padding: 12px 15px;
         margin-top: 12px;
-        border-top: 1px solid rgba(0, 0, 0, 0.6);
+        border-top: 1px solid rgba(41, 41, 41, 0.6);
     }
     header nav ul li{
         display: block;

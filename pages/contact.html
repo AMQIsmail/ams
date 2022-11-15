@@ -20,7 +20,7 @@
         }
         /*===============top text area=====================*/
         .contact{
-            position: relative;
+            /* position: relative; */
             width: 100%;
             min-height:100vh;
             paddding:50px 100px;
@@ -30,10 +30,12 @@
             flex-direction: column;
             background: url(../images/background-nodi-2.jpg);
             background-size: cover;
+            z-index: 0;
         }
         .contact .content{
             max-width: 700px;
             text-align: center;
+            margin: 52px 0px;
         }
         .contact .content h2{
             font-size: 35px;
@@ -161,6 +163,7 @@
                 width: 100%;
                 background: url(../images/back.jpg);
                 background-size: cover;
+                z-index: 0;
             }
             .container{
                 flex-direction: column;
@@ -207,14 +210,14 @@
                         <li><a class="item-underlined" href="../portfolio/home.html">Portfolio</a></li>
                         <li><a class="item-underlined" href="../pages/contact.html">Contact</a></li>
                         <li><a class="item-underlined" href="../blog/blog.html">Blog</a></li>
-						<li><a style="color: black; background:#fff; padding:8px 10px; border-radius: 4px;" href="../registration/registration.html">Sing Up Now</a></li>
+						<li><a class="re-bt" href="../registration/registration.html">Sing Up Now</a></li>
                       </ul>
                     </nav>
                   </div>
                 </div>
               </header>
         <!-- ================ contact form =======================-->
-        <section class="contact">
+        <div class="contact">
             <div class="content">
                 <h2>Contact Us</h2>
                 <p>Is is our contact form, It is my of company contact form.
@@ -267,7 +270,7 @@
                     </div>
                 </form>
             </div>
-        </section>
+        </div>
         <!--==================  foter design  =====================-->
     <div class="foter">
         <div class="custom-container foter-parent">
@@ -306,7 +309,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-<!--1.  আমরা একটা কন্টাক্ট ফর্ম এর ইউজার এর কন্টাক ইনফর্মেশন ডাটাবেজে স্টোর করতেছি সেটা হল firbase 
+<!-- আমরা একটা কন্টাক্ট ফর্ম এর ইউজার এর কন্টাক ইনফর্মেশন ডাটাবেজে স্টোর করতেছি সেটা হল firbase 
   firebase এর a লিংক ব্যবহার আমাদেরকে আগে করতে হয় -->
 
 <script>
