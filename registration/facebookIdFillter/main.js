@@ -46,7 +46,7 @@ const signIn = () => {
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((result) => {
             // Signed in 
-            document.getElementById("message").innerHTML = 'Your ID and Your Group Same.';
+            document.getElementById("message").innerHTML = 'Your ID Data Base Existing!';
             console.log(result)
             //message seccess alert
     setTimeout(() => {
